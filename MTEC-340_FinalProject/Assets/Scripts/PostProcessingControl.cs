@@ -74,6 +74,12 @@ public class PostProcessingControl : MonoBehaviour
         _mainVolume.sharedProfile.AddSettings<MotionBlur>();
         _motionBlur = _mainVolume.sharedProfile.GetSetting<MotionBlur>();
 
+        _mainVolume.sharedProfile.AddSettings<Vignette>();
+        _vignette = _mainVolume.sharedProfile.GetSetting<Vignette>();
+        _vignette.intensity.overrideState = true;
+        _vignette.smoothness.overrideState = true;
+        _vignette.roundness.overrideState = true;
+
     }
 
     // Update is called once per frame
