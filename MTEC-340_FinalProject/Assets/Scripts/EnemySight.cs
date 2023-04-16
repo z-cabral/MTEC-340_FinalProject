@@ -14,7 +14,7 @@ public class EnemySight : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(Scan());
+
     }
 
     void Update()
@@ -23,13 +23,5 @@ public class EnemySight : MonoBehaviour
         
     }
 
-//    private IEnumerator Scan()
-//    {
-//            transform.Rotate(0, angle , 0);
-//        yield return new WaitUntil(angle <= 45);
-//        for (int angle = 0; angle >= -45; angle -= 1)
-//            transform.Rotate(0, angle, 0);
-//        yield return new Wai
 
-//    }
 }
