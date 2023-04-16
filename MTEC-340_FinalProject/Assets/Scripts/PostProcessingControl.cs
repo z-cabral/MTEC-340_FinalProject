@@ -51,34 +51,40 @@ public class PostProcessingControl : MonoBehaviour
         _ambientOcclusion = _mainVolume.sharedProfile.GetSetting<AmbientOcclusion>();
         _ambientOcclusion.intensity.overrideState = true;
         _ambientOcclusion.thicknessModifier.overrideState = true;
+        _ambientOcclusion.enabled.value= false;
 
         _mainVolume.sharedProfile.AddSettings<Bloom>();
         _bloom = _mainVolume.sharedProfile.GetSetting<Bloom>();
         _bloom.intensity.overrideState = true;
         _bloom.fastMode.overrideState = true;
+        _bloom.enabled.value = false;
 
         _mainVolume.sharedProfile.AddSettings<ChromaticAberration>();
         _chromaticAberration = _mainVolume.sharedProfile.GetSetting<ChromaticAberration>();
         _chromaticAberration.intensity.overrideState = true;
         _chromaticAberration.fastMode.overrideState = true;
+        _chromaticAberration.enabled.value = false;
 
         _mainVolume.sharedProfile.AddSettings<DepthOfField>();
         _depthOfField = _mainVolume.sharedProfile.GetSetting<DepthOfField>();
+        _depthOfField.enabled.value = false;
 
         _mainVolume.sharedProfile.AddSettings<Grain>();
         _grain = _mainVolume.sharedProfile.GetSetting<Grain>();
         _grain.colored.overrideState = true;
         _grain.intensity.overrideState = true;
-        _grain.size.overrideState = true;
+        _grain.enabled.value = false;
 
         _mainVolume.sharedProfile.AddSettings<MotionBlur>();
         _motionBlur = _mainVolume.sharedProfile.GetSetting<MotionBlur>();
+        _motionBlur.enabled.value = false;
 
         _mainVolume.sharedProfile.AddSettings<Vignette>();
         _vignette = _mainVolume.sharedProfile.GetSetting<Vignette>();
         _vignette.intensity.overrideState = true;
         _vignette.smoothness.overrideState = true;
         _vignette.roundness.overrideState = true;
+        _vignette.enabled.value = false;
 
     }
 

@@ -355,11 +355,16 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/EnemyMovement.cs"
+"Assets/Scripts/EnemySight.cs"
 "Assets/Scripts/FPSInput.cs"
+"Assets/Scripts/GameBehavior.cs"
 "Assets/Scripts/GuiBehaviour.cs"
 "Assets/Scripts/LaserBehaviour.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PostProcessingControl.cs"
+"Assets/Scripts/ReactiveTarget.cs"
+"Assets/Scripts/Utilities.cs"
 -langversion:9.0
 
 /deterministic

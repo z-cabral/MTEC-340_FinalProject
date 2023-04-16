@@ -24,6 +24,17 @@ public class GuiBehaviour : MonoBehaviour
                 settingsMenu.SetActive(false);
                 Time.timeScale = 1f;
             }
+
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
     }
 
