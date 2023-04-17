@@ -56,16 +56,22 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/LaserBehaviour.cs" />
-    <Compile Include="Assets/Scripts/PostProcessingControl.cs" />
-    <Compile Include="Assets/Scripts/MouseLook.cs" />
-    <Compile Include="Assets/Scripts/GuiBehaviour.cs" />
-    <Compile Include="Assets/Scripts/FPSInput.cs" />
-    <Compile Include="Assets/Scripts/ReactiveTarget.cs" />
-    <Compile Include="Assets/Scripts/EnemyMovement.cs" />
     <Compile Include="Assets/Scripts/GameBehavior.cs" />
-    <Compile Include="Assets/Scripts/EnemySight.cs" />
     <Compile Include="Assets/Scripts/Utilities.cs" />
+    <Compile Include="Assets/Scripts/Player/LaserBehaviour.cs" />
+    <Compile Include="Assets/Scripts/PostProcessingControl.cs" />
+    <Compile Include="Assets/Scripts/Player/MouseLook.cs" />
+    <Compile Include="Assets/Scripts/Enemies/ReactiveTarget.cs" />
+    <Compile Include="Assets/Scripts/GuiBehaviour.cs" />
+    <Compile Include="Assets/Scripts/Player/FPSInput.cs" />
+    <Compile Include="Assets/Scripts/Enemies/EnemyMovement.cs" />
+    <Compile Include="Assets/Scripts/Enemies/EnemySight.cs" />
+    <Compile Include="Assets/Scripts/Enemies/GuardStateMachine/GuardBaseState.cs" />
+    <Compile Include="Assets/Scripts/Enemies/GuardStateMachine/GuardStateMachine.cs" />
+    <Compile Include="Assets/Scripts/Enemies/GuardStateMachine/GuardUnalertState.cs" />
+    <Compile Include="Assets/Scripts/Enemies/GuardStateMachine/GuardSuspiciousState.cs" />
+    <Compile Include="Assets/Scripts/Enemies/GuardStateMachine/GuardAlertState.cs" />
+    <Compile Include="Assets/Scripts/Enemies/EnemyUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
