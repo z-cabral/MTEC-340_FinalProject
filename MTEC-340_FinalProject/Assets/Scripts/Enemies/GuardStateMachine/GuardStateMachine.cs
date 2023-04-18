@@ -33,7 +33,6 @@ public class GuardStateMachine : MonoBehaviour
         SetState(UnalertState);
     }
 
-    // Update is called once per frame
     void Update()
     {
         _currentState.UpdateState(this);

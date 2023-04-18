@@ -18,6 +18,7 @@ public class GuardSuspiciousState : GuardBaseState
 
     public override void UpdateState(GuardStateMachine guard)
     {
+        //guard.StartCoroutine(SuspicionCoroutine(guard));
         SuspicionTimer(guard);
     }
 
@@ -36,6 +37,16 @@ public class GuardSuspiciousState : GuardBaseState
                 EnemySpotted(guard);
             }
         }
+    }
+
+    public IEnumerator SuspicionCoroutine(GuardStateMachine guard)
+    {
+        timerIsRunning = true;
+        yield return new WaitForSeconds(duration);
+        timerIsRunning = false;
+        EnemySpotted(guard);
+        yield return new WaitForSeconds(1);
+        Debug.Log("In the routine");
     }
 
     private void EnemySpotted(GuardStateMachine guard)
