@@ -5,8 +5,7 @@ using UnityEngine;
 public class GuiBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject
-        audioSettings,
-        displaySettings,
+        audioDisplaySettings,
         postProcessingSettings,
         settingsMenu;
 
@@ -43,23 +42,18 @@ public class GuiBehaviour : MonoBehaviour
         switch (index)
         {
             default:
-                audioSettings.SetActive(false);
-                displaySettings.SetActive(false);
+                //audioSettings.SetActive(false);
+                audioDisplaySettings.SetActive(false);
                 postProcessingSettings.SetActive(false);
                 break;
             case 0:
-                audioSettings.SetActive(true);
-                displaySettings.SetActive(false);
+                //audioSettings.SetActive(true);
+                audioDisplaySettings.SetActive(true);
                 postProcessingSettings.SetActive(false);
                 break;
             case 1:
-                audioSettings.SetActive(false);
-                displaySettings.SetActive(true);
-                postProcessingSettings.SetActive(false);
-                break;
-            case 2:
-                audioSettings.SetActive(false);
-                displaySettings.SetActive(false);
+                //audioSettings.SetActive(false);
+                audioDisplaySettings.SetActive(false);
                 postProcessingSettings.SetActive(true);
                 break;
         }

@@ -19,6 +19,10 @@ public class GuardStateMachine : MonoBehaviour
     public EnemySight BodySight;
     public EnemyUtilities Utilities;
 
+    //[SerializeField] Transform
+    //    GuardPos,
+    //    PlayerPos;
+
     void Awake()
     {
         ReactiveTarget = GetComponent<ReactiveTarget>();
@@ -26,10 +30,13 @@ public class GuardStateMachine : MonoBehaviour
         HeadSight = GetComponentInChildren<EnemySight>();
         BodySight = GetComponent<EnemySight>();
         Utilities = GetComponent<EnemyUtilities>();
+
     }
 
     private void Start()
     {
+        //PlayerPos = GameBehavior.Instance.Player.transform;
+
         SetState(UnalertState);
     }
 

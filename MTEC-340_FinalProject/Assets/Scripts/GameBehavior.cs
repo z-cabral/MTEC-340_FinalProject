@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class GameBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameBehavior Instance;
+
+    public GameObject Player;
+    public Transform PlayerPos;
+
+    void Awake()
     {
-        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        Player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        PlayerPos = Player.transform;
+    }
+
     void Update()
     {
-        
+        PlayerPos = Player.transform;
     }
 }

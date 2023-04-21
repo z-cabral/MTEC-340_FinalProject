@@ -1,18 +1,9 @@
 ﻿<Properties StartupConfiguration="{6B0A4598-7F9B-D2EF-A7AB-DB8874F6FAFA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/CameraStateMachine/CameraSuspiciousState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AudioDisplayControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/GuardStateMachine/GuardBaseState.cs" Line="7" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/GuardStateMachine/GuardAlertState.cs" Line="14" Column="6" />
-      <File FileName="Assets/Scripts/Enemies/GuardStateMachine/GuardUnalertState.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/GuardStateMachine/GuardSuspiciousState.cs" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/GuardStateMachine/GuardStateMachine.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/EnemySight.cs" Line="31" Column="6" />
-      <File FileName="Assets/Scripts/Enemies/EnemyUtilities.cs" />
-      <File FileName="Assets/Scripts/Enemies/CameraStateMachine/CameraBaseState.cs" Line="3" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/CameraStateMachine/CameraStateMachine.cs" Line="40" Column="6" />
-      <File FileName="Assets/Scripts/Enemies/CameraStateMachine/CameraUnalertState.cs" Line="21" Column="53" />
-      <File FileName="Assets/Scripts/Enemies/CameraStateMachine/CameraAlertState.cs" Line="11" Column="6" />
-      <File FileName="Assets/Scripts/Enemies/CameraStateMachine/CameraSuspiciousState.cs" Line="29" Column="44" />
+      <File FileName="Assets/Scripts/GameBehavior.cs" Line="27" Column="17" />
+      <File FileName="Assets/Scripts/DisplayControl.cs" Line="71" Column="1" />
+      <File FileName="Assets/Scripts/GuiBehaviour.cs" Line="51" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,13 +11,9 @@
           <Node name="MTEC-340_FinalProject" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Enemies" expanded="True">
-                  <Node name="CameraStateMachine" expanded="True">
-                    <Node name="CameraSuspiciousState.cs" selected="True" />
-                  </Node>
-                  <Node name="GuardStateMachine" expanded="True" />
-                </Node>
+                <Node name="Enemies" expanded="True" />
                 <Node name="Player" expanded="True" />
+                <Node name="AudioDisplayControl.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -36,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5d38b6b1-69d8-4d70-89c5-1cc895df1f0c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="88349ec2-e80f-47dc-9d2d-7267a1f5a3a2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
