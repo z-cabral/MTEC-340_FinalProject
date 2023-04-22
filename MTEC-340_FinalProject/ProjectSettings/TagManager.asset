@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Guard
   - CCTV
+  - Consumeable
   layers:
   - Default
   - TransparentFX

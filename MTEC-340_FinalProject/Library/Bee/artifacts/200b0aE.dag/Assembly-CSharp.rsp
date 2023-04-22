@@ -362,6 +362,7 @@
 "Assets/Scripts/Enemies/CameraStateMachine/CameraStateMachine.cs"
 "Assets/Scripts/Enemies/CameraStateMachine/CameraSuspiciousState.cs"
 "Assets/Scripts/Enemies/CameraStateMachine/CameraUnalertState.cs"
+"Assets/Scripts/Enemies/Consumeable.cs"
 "Assets/Scripts/Enemies/EnemyMovement.cs"
 "Assets/Scripts/Enemies/EnemySight.cs"
 "Assets/Scripts/Enemies/EnemyUtilities.cs"

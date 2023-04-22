@@ -14,8 +14,8 @@ public class GuardUnalertState : GuardBaseState
         if (!guard.HeadSight.seenObject.TryGetComponent<MouseLook>(out MouseLook looker))
         {
             //placeholder until NavMesh Movement is fully implemented
-            guard.EnemyMovement.Wander(10);
-
+            //guard.EnemyMovement.Wander(10);
+            guard.EnemyMovement.Patrol();
             if (guard.IsPowered == false)
             {
                 guard.SetState(guard.DeactivatedState);
