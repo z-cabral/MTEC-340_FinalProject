@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\Enemies\ReactiveTarget.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardUnalertState.cs" />
     <Compile Include="Assets\Scripts\AudioDisplayControl.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardDeactivatedState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraDeactivatedState.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardSuspiciousState.cs" />
     <Compile Include="Assets\Scripts\GuiBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraStateMachine.cs" />
@@ -75,8 +77,6 @@
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardBaseState.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySight.cs" />
-    <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardDeactivatedState.cs" />
-    <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraDeactivatedState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
