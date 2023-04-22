@@ -6,6 +6,8 @@ public class CameraUnalertState : CameraBaseState
 {
     public override void EnterState(CameraStateMachine camera)
     {
+        camera.IsPowered = true;
+        camera.Deactivateable = true;
         Debug.Log(camera.name + " is UNALERT");
     }
 
@@ -13,11 +15,16 @@ public class CameraUnalertState : CameraBaseState
     {
         if (!camera.HeadSight.seenObject.CompareTag("Player"))
         {
-            //placeholder until NavMesh Movement is fully implemented
-            //camera.EnemyMovement.Wander(10);
+            //scan area
+
+            if (camera.IsPowered == false)
+            {
+                camera.SetState(camera.DeactivatedState);
+            }
         }
         else
         {
+            camera.playerLast = GameBehavior.Instance.PlayerPos.position;
             camera.SetState(camera.SuspiciousState);
         }
     }

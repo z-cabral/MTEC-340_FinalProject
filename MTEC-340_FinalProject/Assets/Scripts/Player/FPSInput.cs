@@ -12,6 +12,10 @@ public class FPSInput : MonoBehaviour
 
     private CharacterController _charControl;
 
+    [SerializeField] float charHeightCur=2f, charHeightTarget=2f, charCenterY;
+
+    public float target;
+
     private void Start()
     {
         _charControl = GetComponent<CharacterController>();
@@ -22,7 +26,7 @@ public class FPSInput : MonoBehaviour
     {
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
-
+      
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
         movement = Vector3.ClampMagnitude(movement, speed);
         movement.y = gravity;
@@ -30,6 +34,14 @@ public class FPSInput : MonoBehaviour
         movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
         _charControl.Move(movement);
+
+        charHeightTarget = 1+Input.GetAxis("Crouch")*0.75f;
+
+        charHeightCur = Mathf.MoveTowards(charHeightCur, 2 * charHeightTarget, speed * Time.deltaTime);
+        _charControl.height = charHeightCur;
+
+        charCenterY = 0.5f - charHeightCur / 2;        
+        _charControl.center = new Vector3(0, charCenterY, 0);
     }
 
 }

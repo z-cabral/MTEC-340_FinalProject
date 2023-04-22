@@ -9,7 +9,12 @@ public class GuardSuspiciousState : GuardBaseState
 
     public override void EnterState(GuardStateMachine guard)
     {
+        guard.IsPowered = true;
+        guard.Deactivateable = false;
+        guard.BodySight.enabled = true;
+        guard.HeadSight.enabled = true;
         Debug.Log(guard.name + " is SUSPICIOUS");
+        guard.gameObject.transform.LookAt(guard.playerLast);
         //Stop Head Scanning Animation
         //Play Random VO
         duration = 10f;
@@ -18,6 +23,11 @@ public class GuardSuspiciousState : GuardBaseState
 
     public override void UpdateState(GuardStateMachine guard)
     {
+        guard.IsPowered = !guard.ReactiveTarget.deactivated;
+        if (guard.IsPowered == false)
+        {
+            guard.SetState(guard.DeactivatedState);
+        }
         //guard.StartCoroutine(SuspicionCoroutine(guard));
         SuspicionTimer(guard);
     }

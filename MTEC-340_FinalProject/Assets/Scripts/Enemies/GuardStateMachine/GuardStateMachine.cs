@@ -9,9 +9,13 @@ public class GuardStateMachine : MonoBehaviour
     public GuardUnalertState UnalertState = new();
     public GuardSuspiciousState SuspiciousState = new();
     public GuardAlertState AlertState = new();
+    public GuardDeactivatedState DeactivatedState = new();
 
     bool _isPowered;
-    public bool IsPowered { get => _isPowered; set { _isPowered = value; } }
+    public bool IsPowered{get => _isPowered; set { _isPowered = value; }}
+
+    bool _deactivateable;
+    public bool Deactivateable { get => _deactivateable; set { _deactivateable = value;  } }
 
     public ReactiveTarget ReactiveTarget;
     public EnemyMovement EnemyMovement;
@@ -19,9 +23,7 @@ public class GuardStateMachine : MonoBehaviour
     public EnemySight BodySight;
     public EnemyUtilities Utilities;
 
-    //[SerializeField] Transform
-    //    GuardPos,
-    //    PlayerPos;
+    public Vector3 playerLast;
 
     void Awake()
     {
@@ -30,7 +32,6 @@ public class GuardStateMachine : MonoBehaviour
         HeadSight = GetComponentInChildren<EnemySight>();
         BodySight = GetComponent<EnemySight>();
         Utilities = GetComponent<EnemyUtilities>();
-
     }
 
     private void Start()

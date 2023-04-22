@@ -6,6 +6,8 @@ public class CameraAlertState : CameraBaseState
 {
     public override void EnterState(CameraStateMachine camera)
     {
+        camera.IsPowered = true;
+        camera.Deactivateable = false;
         Debug.Log(camera.name + " is ALERT");
         //Trigger Game Over
     }

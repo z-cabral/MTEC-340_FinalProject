@@ -9,7 +9,12 @@ public class CameraSuspiciousState : CameraBaseState
 
     public override void EnterState(CameraStateMachine camera)
     {
+        camera.IsPowered = true;
+        camera.Deactivateable = false;
+        camera.HeadSight.enabled = true;
         Debug.Log(camera.name + " is SUSPICIOUS");
+        camera.gameObject.transform.LookAt(camera.playerLast);
+        //Stop Head Scanning Animation
         //Random VO
         duration = 10f;
         timerIsRunning = true;
@@ -17,6 +22,10 @@ public class CameraSuspiciousState : CameraBaseState
 
     public override void UpdateState(CameraStateMachine camera)
     {
+        if (camera.IsPowered == false)
+        {
+            camera.SetState(camera.DeactivatedState);
+        }
         SuspicionTimer(camera);
     }
 

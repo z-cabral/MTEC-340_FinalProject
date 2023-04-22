@@ -22,7 +22,20 @@ public class MouseLook : MonoBehaviour
 
     private float _rotationX = 0;
 
+    //[SerializeField] float _rotationZ;
+
+    public Transform _Pivot;
+
+    [SerializeField] float speed=100f, maxLeanAngle=20f;
+
+    float curAngle = 0f;
+
     private bool paused;
+
+    private void Awake()
+    {
+        if (_Pivot == null && transform.parent != null) _Pivot = transform.parent;
+    }
 
     void Start()
     {
@@ -52,6 +65,10 @@ public class MouseLook : MonoBehaviour
                 float rotationY = transform.localEulerAngles.y;
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+
+                curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
+                _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
+
             }
             else
             {
@@ -62,8 +79,16 @@ public class MouseLook : MonoBehaviour
                 float rotationY = transform.localEulerAngles.y + delta;
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+
+                curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * -Input.GetAxis("Lean"), speed * Time.deltaTime);
+                _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
+
             }
         }
-        
+
+        //_rotationZ = Mathf.LerpAngle(30, -30, Input.GetAxis("Lean") + .5f);
+
+
+
     }
 }

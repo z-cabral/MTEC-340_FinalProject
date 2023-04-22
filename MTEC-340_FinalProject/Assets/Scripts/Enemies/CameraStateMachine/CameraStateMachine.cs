@@ -9,12 +9,18 @@ public class CameraStateMachine : MonoBehaviour
     public CameraUnalertState UnalertState = new();
     public CameraSuspiciousState SuspiciousState = new();
     public CameraAlertState AlertState = new();
+    public CameraDeactivatedState DeactivatedState = new ();
 
     bool _isPowered;
     public bool IsPowered { get => _isPowered; set { _isPowered = value; } }
 
+    bool _deactivateable;
+    public bool Deactivateable { get => _deactivateable; set { _deactivateable = value; } }
+
     public ReactiveTarget ReactiveTarget;
     public EnemySight HeadSight;
+
+    public Vector3 playerLast;
 
     void Awake()
     {
