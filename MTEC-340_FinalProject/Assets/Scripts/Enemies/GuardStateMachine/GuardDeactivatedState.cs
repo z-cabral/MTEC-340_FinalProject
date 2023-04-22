@@ -6,6 +6,7 @@ public class GuardDeactivatedState : GuardBaseState
 
     public override void EnterState(GuardStateMachine guard)
     {
+        guard.EnemyMovement.agent.enabled = false;
         guard.IsPowered = false;
         guard.Deactivateable = false;
         duration = 10f;

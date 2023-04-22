@@ -7260,7 +7260,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24380
+  m_Name: pb_Mesh24420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12112,6 +12112,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &617060197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617060198}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617060198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617060197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.183578, y: 17.656727, z: -4.610861}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625555877
 GameObject:
   m_ObjectHideFlags: 0
@@ -13222,7 +13253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &682640367
 Animator:
   serializedVersion: 5
@@ -13257,9 +13288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areSeeing: 0
   seenObject: {fileID: 0}
-  dotSight: 0
-  viewRadius: 0
-  viewAngle: 0
+  farSightAngle: 90
+  farSightDistance: 100
+  nearSightAngle: 110
+  nearSightDistance: 20
 --- !u!135 &682640369
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13330,7 +13362,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682640366}
-  m_LocalRotation: {x: 0.12059043, y: -0.37940946, z: 0.04995019, w: 0.9159756}
+  m_LocalRotation: {x: 0.12059044, y: -0.3794095, z: 0.049950194, w: 0.91597563}
   m_LocalPosition: {x: -0.5, y: 2, z: -18.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13564,7 +13596,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25484
+  m_Name: pb_Mesh25742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34138,6 +34170,8 @@ MonoBehaviour:
   audioDisplaySettings: {fileID: 832655989}
   postProcessingSettings: {fileID: 1501874492}
   settingsMenu: {fileID: 380401295}
+  paused: {fileID: 2292876253719272998, guid: e89b9094c40244098be7f2f9b4abb5d9, type: 2}
+  unpaused: {fileID: 24500006, guid: e89b9094c40244098be7f2f9b4abb5d9, type: 2}
 --- !u!1 &1459210939
 GameObject:
   m_ObjectHideFlags: 0
@@ -36643,8 +36677,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577869243}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28, y: 1.64, z: 3.54}
+  m_LocalRotation: {x: -0, y: 0.41067934, z: -0, w: 0.9117798}
+  m_LocalPosition: {x: -7.64, y: 1.64, z: -7.31}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36652,7 +36686,7 @@ Transform:
   - {fileID: 634774052}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 48.495, z: 0}
 --- !u!114 &1577869249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36669,6 +36703,7 @@ MonoBehaviour:
   obstacleRange: 5
   PatrolRoute: {fileID: 1795032868}
   Locations: []
+  agent: {fileID: 0}
   timerDuration: 10
   timerIsRunning: 1
   eyes: {fileID: 1577869253}
@@ -36740,9 +36775,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areSeeing: 0
   seenObject: {fileID: 0}
-  dotSight: 0
-  viewRadius: 0
-  viewAngle: 0
+  farSightAngle: 90
+  farSightDistance: 20
+  nearSightAngle: 110
+  nearSightDistance: 5
 --- !u!1 &1579037022
 GameObject:
   m_ObjectHideFlags: 0
@@ -38156,8 +38192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9ab907bd9274e9fabae6ad0ed6ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  PlayerPos: {fileID: 0}
+  Player: {fileID: 474051829}
+  PlayerPos: {fileID: 474051834}
 --- !u!4 &1656463927
 Transform:
   m_ObjectHideFlags: 0
@@ -38688,9 +38724,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areSeeing: 0
   seenObject: {fileID: 0}
-  dotSight: 0
-  viewRadius: 0
-  viewAngle: 0
+  farSightAngle: 90
+  farSightDistance: 100
+  nearSightAngle: 110
+  nearSightDistance: 20
 --- !u!1 &1682294065
 GameObject:
   m_ObjectHideFlags: 0
@@ -45328,7 +45365,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26350
+  m_Name: pb_Mesh26832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
     public Transform PatrolRoute;
     public List<Transform> Locations;
     private int _locationIndex = 0;
-    private NavMeshAgent _agent;
+    public NavMeshAgent agent;
     private float waitAtLocation;
 
     public float timerDuration = 10;
@@ -27,14 +27,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         InitializePatrolRoute();
         MoveToNextPatrolLocation();
     }
 
     public void Patrol()
     {
-        if (_agent.remainingDistance < 0.2f && !_agent.pathPending)
+        if (agent.remainingDistance < 0.2f && !agent.pathPending)
         {
                 MoveToNextPatrolLocation();
         }
@@ -58,7 +58,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if (Locations.Count == 0)
                 return;
-            _agent.destination = Locations[_locationIndex].position;
+            agent.destination = Locations[_locationIndex].position;
             _locationIndex = (_locationIndex + 1) % Locations.Count;
             waitAtLocation = 10f;
         }

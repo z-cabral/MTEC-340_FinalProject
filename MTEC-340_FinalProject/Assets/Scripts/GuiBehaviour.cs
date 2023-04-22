@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class GuiBehaviour : MonoBehaviour
 {
@@ -9,20 +14,24 @@ public class GuiBehaviour : MonoBehaviour
         postProcessingSettings,
         settingsMenu;
 
+    [SerializeField] AudioMixerSnapshot paused, unpaused;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        
+
+        if (Input.GetButtonDown("Pause"))
         {
             if(settingsMenu.activeSelf == false)
             {
                 settingsMenu.SetActive(true);
-                Time.timeScale = 0f;
             }
             else if (settingsMenu.activeSelf == true)
             {
                 settingsMenu.SetActive(false);
-                Time.timeScale = 1f;
             }
+
+            Pause();
 
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -35,6 +44,21 @@ public class GuiBehaviour : MonoBehaviour
                 Cursor.visible = false;
             }
         }
+    }
+
+    void Pause()
+    {
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        Lowpass(0.1f);
+
+    }
+
+    void Lowpass(float transitionTime)
+    {
+        if (Time.timeScale == 0)
+            paused.TransitionTo(transitionTime);
+        else
+            unpaused.TransitionTo(transitionTime);
     }
 
     public void SettingsPicker(int index)
@@ -57,5 +81,15 @@ public class GuiBehaviour : MonoBehaviour
                 postProcessingSettings.SetActive(true);
                 break;
         }
+    }
+
+
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }

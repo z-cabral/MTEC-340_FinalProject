@@ -56,21 +56,25 @@ public class AudioDisplayControl : MonoBehaviour
 
     public void AdjustMasterLevel(float level)
     {
-        mainMix.SetFloat("MasterLevel", level);
+        float logLevel = 20.0f * Mathf.Log10(level);
+        mainMix.SetFloat("MasterLevel", logLevel);
     }
 
     public void AdjustMusicLevel(float level)
     {
-        mainMix.SetFloat("MusicLevel", level);
+        float logLevel = 20.0f * Mathf.Log10(level);
+        mainMix.SetFloat("MusicLevel", logLevel);
     }
 
     public void AdjustSFXLevel(float level)
     {
-        mainMix.SetFloat("SFXLevel", level);
+        float logLevel = 20.0f * Mathf.Log10(level);
+        mainMix.SetFloat("SFXLevel", logLevel);
     }
 
     public void AdjustDialogueLevel(float level)
     {
-        mainMix.SetFloat("DialogueLevel", level);
+        float logLevel = 20.0f * Mathf.Log10(level);
+        mainMix.SetFloat("DialogueLevel", logLevel);
     }
 }

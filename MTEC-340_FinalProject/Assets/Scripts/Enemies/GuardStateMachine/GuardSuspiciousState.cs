@@ -9,6 +9,7 @@ public class GuardSuspiciousState : GuardBaseState
 
     public override void EnterState(GuardStateMachine guard)
     {
+        guard.EnemyMovement.agent.enabled = false;
         guard.IsPowered = true;
         guard.Deactivateable = false;
         guard.BodySight.enabled = true;

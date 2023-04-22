@@ -33,7 +33,7 @@ public class LaserBehaviour : MonoBehaviour
         if (cooldown > 0f)
         {
             cooldown -= Time.deltaTime;
-            Debug.Log(cooldown);
+            //Debug.Log(cooldown);
         }
         else if (cooldown <= 0f)
         {
@@ -66,13 +66,14 @@ public class LaserBehaviour : MonoBehaviour
                     {
                         //StartCoroutine(SphereIndicator(hit.point));
                     }
-                    if (Input.GetButtonUp("Fire1"))
-                    {
-                        laser.gameObject.SetActive(false);
-                    }
                     cooldown = 60f;
                 }
-            }
+            }          
+        }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            laser.gameObject.SetActive(false);
         }
 
         if (Input.GetButtonDown("Interact"))
