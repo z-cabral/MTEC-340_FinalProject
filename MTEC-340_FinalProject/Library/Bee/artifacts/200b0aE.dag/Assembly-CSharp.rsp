@@ -378,7 +378,14 @@
 "Assets/Scripts/Player/FPSInput.cs"
 "Assets/Scripts/Player/LaserBehaviour.cs"
 "Assets/Scripts/Player/MouseLook.cs"
+"Assets/Scripts/Player/PlayerData.cs"
+"Assets/Scripts/Player/PlayerStateMachine/PlayerBaseState.cs"
+"Assets/Scripts/Player/PlayerStateMachine/PlayerGameplayState.cs"
+"Assets/Scripts/Player/PlayerStateMachine/PlayerInvisibleState.cs"
+"Assets/Scripts/Player/PlayerStateMachine/PlayerStateMachine.cs"
 "Assets/Scripts/PostProcessingControl.cs"
+"Assets/Scripts/SaveSystem.cs"
+"Assets/Scripts/SceneBehaviour.cs"
 "Assets/Scripts/Utilities.cs"
 -langversion:9.0
 

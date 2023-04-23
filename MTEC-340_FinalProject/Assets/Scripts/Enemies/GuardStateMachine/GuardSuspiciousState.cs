@@ -62,7 +62,7 @@ public class GuardSuspiciousState : GuardBaseState
 
     private void EnemySpotted(GuardStateMachine guard)
     {
-        if (!guard.HeadSight.seenObject.CompareTag("Player"))
+        if (!guard.HeadSight.IntruderSearch(GameBehavior.Instance.Player) && !GameBehavior.Instance.Player.GetComponent<PlayerStateMachine>().isInvisible)
         {
             //Play Random "Must've been the wind..." VO
             guard.SetState(guard.UnalertState);

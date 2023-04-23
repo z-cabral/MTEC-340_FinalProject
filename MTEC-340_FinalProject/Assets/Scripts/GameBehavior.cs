@@ -20,17 +20,59 @@ public class GameBehavior : MonoBehaviour
             Instance = this;
         }
 
-        Player = GameObject.FindGameObjectWithTag("Player");
+        DontDestroyOnLoad(Instance);
 
     }
 
     void Start()
     {
-        PlayerPos = Player.transform;
+        if (Player != null)
+        {
+            PlayerPos = Player.transform;
+        }
     }
 
     void Update()
     {
-        PlayerPos = Player.transform;
+        if (Player != null)
+        {
+            PlayerPos = Player.transform;
+        }
+    }
+
+    public void SetupPlayer()
+    {
+        Player = PlayerStateMachine.Instance.gameObject;
+    }
+
+    public void SetupPlayer(Vector3 position)
+    {
+        //Player = PlayerStateMachine.Instance.gameObject;
+        Player.transform.position = position;
+    }
+
+    public void SavePlayer()
+    {
+        Debug.Log("I'm Saving...");
+        SaveSystem.SavePlayer(Player);
+    }
+
+    public void LoadPlayer()
+    {
+        Debug.Log("I'm Loading...");
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        SceneBehaviour.Instance.ChangeToScene(data.scene + 1);
+
+        GuiBehaviour.Instance.Pause();
+
+        Vector3 position;
+        
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        Debug.Log("Loading Player at " + position + "...");
+
+        SetupPlayer(position);
     }
 }
