@@ -8,7 +8,7 @@ public class PlayerData
     public int scene;
     public float[] position;
 
-    public PlayerData (PlayerStateMachine player)
+    public PlayerData (GameObject player)
     {
         scene = SceneBehaviour.Instance.currentScene;
 

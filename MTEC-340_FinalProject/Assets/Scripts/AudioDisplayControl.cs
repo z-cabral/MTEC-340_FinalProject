@@ -16,11 +16,12 @@ public class AudioDisplayControl : MonoBehaviour
     private void Awake()
     {
         //resolutionDropdown = GuiBehaviour.Instance.GetComponentInChildren<TMP_Dropdown>();
+        resolutions = Screen.resolutions;
     }
 
     public void Start()
     {
-        SetUpResolutions();
+
     }
 
     public void SetFullScreen(bool isFullScreen)
@@ -28,7 +29,7 @@ public class AudioDisplayControl : MonoBehaviour
         Screen.fullScreen = isFullScreen;
     }
 
-    private void SetUpResolutions()
+    public void SetUpResolutions(Resolution[] resolutions)
     {
         resolutions = Screen.resolutions;
 

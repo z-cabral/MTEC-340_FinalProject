@@ -19,6 +19,11 @@ public class PlayerStateMachine : MonoBehaviour
     public LaserBehaviour laser;
     public MouseLook mouseHead, mouseBody;
 
+    private void OnLevelWasLoaded(int level)
+    {
+        GameBehavior.Instance.SetupPlayer();
+    }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

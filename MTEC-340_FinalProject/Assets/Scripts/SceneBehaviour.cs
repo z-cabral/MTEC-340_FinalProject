@@ -26,21 +26,21 @@ public class SceneBehaviour : MonoBehaviour
     public void NewGame()
     {
         GuiBehaviour.Instance.ToggleMenu();
-        SceneManager.UnloadSceneAsync(0);
-        SceneManager.LoadScene(1);
+        SceneManager.UnloadSceneAsync(currentScene);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void ChangeToScene(int index)
     {
-        SceneManager.UnloadSceneAsync(currentScene);
-        SceneManager.LoadScene(index);
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadSceneAsync(index);
     }
 
     public void NextScene()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.UnloadSceneAsync(currentScene);
-        SceneManager.LoadScene(currentScene + 1);
+        SceneManager.LoadSceneAsync(currentScene + 1);
     }
 
     public void QuitGame()

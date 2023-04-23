@@ -120,7 +120,7 @@ MonoBehaviour:
   obstacleRange: 5
   PatrolRoute: {fileID: 0}
   Locations: []
-  agent: {fileID: 0}
+  agent: {fileID: 279130970553785628}
   timerDuration: 5
   timerIsRunning: 1
   eyes: {fileID: 279130970553785626}
@@ -190,10 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5dad421bc471b996ac7ae6531ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReactiveTarget: {fileID: 0}
-  EnemyMovement: {fileID: 0}
-  HeadSight: {fileID: 0}
-  BodySight: {fileID: 0}
+  ReactiveTarget: {fileID: 279130970553785699}
+  EnemyMovement: {fileID: 279130970553785630}
+  HeadSight: {fileID: 279130971271601696}
+  BodySight: {fileID: 279130970553785626}
   Utilities: {fileID: 0}
   playerLast: {x: 0, y: 0, z: 0}
 --- !u!1 &279130971271601703

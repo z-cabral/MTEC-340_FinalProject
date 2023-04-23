@@ -19,6 +19,8 @@ public class GuiBehaviour : MonoBehaviour
 
     [SerializeField] AudioMixerSnapshot paused, unpaused;
 
+    AudioDisplayControl audioDisplayControl;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -32,6 +34,10 @@ public class GuiBehaviour : MonoBehaviour
 
         DontDestroyOnLoad(Instance);
 
+        audioDisplayControl = GameObject.Find("StartCam").GetComponent<AudioDisplayControl>();
+
+        //        audioDisplayControl.SetUpResolutions()
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         Cursor.lockState = CursorLockMode.Locked;
 
         ToggleMenu();
