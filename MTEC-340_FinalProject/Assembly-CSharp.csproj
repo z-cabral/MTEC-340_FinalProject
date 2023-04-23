@@ -57,27 +57,34 @@
     <Compile Include="Assets\Scripts\GameBehavior.cs" />
     <Compile Include="Assets\Scripts\Utilities.cs" />
     <Compile Include="Assets\Scripts\Player\LaserBehaviour.cs" />
+    <Compile Include="Assets\Scripts\SceneBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraSuspiciousState.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyUtilities.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStateMachine\PlayerStateMachine.cs" />
     <Compile Include="Assets\Scripts\PostProcessingControl.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraAlertState.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraUnalertState.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardAlertState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardStateMachine.cs" />
     <Compile Include="Assets\Scripts\Enemies\ReactiveTarget.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardUnalertState.cs" />
     <Compile Include="Assets\Scripts\AudioDisplayControl.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardDeactivatedState.cs" />
     <Compile Include="Assets\Scripts\Enemies\Consumeable.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStateMachine\PlayerInvisibleState.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraDeactivatedState.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardSuspiciousState.cs" />
     <Compile Include="Assets\Scripts\GuiBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraStateMachine.cs" />
     <Compile Include="Assets\Scripts\Player\FPSInput.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardBaseState.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySight.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStateMachine\PlayerBaseState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStateMachine\PlayerGameplayState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

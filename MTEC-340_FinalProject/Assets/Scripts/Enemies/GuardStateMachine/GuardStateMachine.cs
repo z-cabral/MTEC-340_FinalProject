@@ -27,8 +27,8 @@ public class GuardStateMachine : MonoBehaviour
 
     void Awake()
     {
-        ReactiveTarget = GetComponent<ReactiveTarget>();
         EnemyMovement = GetComponent<EnemyMovement>();
+        ReactiveTarget = GetComponent<ReactiveTarget>();
         HeadSight = GetComponentInChildren<EnemySight>();
         BodySight = GetComponent<EnemySight>();
         Utilities = GetComponent<EnemyUtilities>();

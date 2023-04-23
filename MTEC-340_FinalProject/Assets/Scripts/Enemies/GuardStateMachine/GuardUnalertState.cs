@@ -4,10 +4,10 @@ public class GuardUnalertState : GuardBaseState
 {
     public override void EnterState(GuardStateMachine guard)
     {
-        guard.EnemyMovement.agent.enabled = true;
         guard.IsPowered = true;
         guard.Deactivateable = true;
         Debug.Log(guard.name + " is UNALERT");
+        guard.EnemyMovement.agent.enabled = true;
     }
 
     public override void UpdateState(GuardStateMachine guard)

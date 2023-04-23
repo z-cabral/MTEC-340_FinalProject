@@ -22,12 +22,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void Awake()
     {
+        agent = GetComponent<NavMeshAgent>();
         eyes = GetComponentInParent<EnemySight>();
     }
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
         InitializePatrolRoute();
         MoveToNextPatrolLocation();
     }

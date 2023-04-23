@@ -13,6 +13,11 @@ public class AudioDisplayControl : MonoBehaviour
 
     public AudioMixer mainMix;
 
+    private void Awake()
+    {
+        //resolutionDropdown = GuiBehaviour.Instance.GetComponentInChildren<TMP_Dropdown>();
+    }
+
     public void Start()
     {
         SetUpResolutions();
