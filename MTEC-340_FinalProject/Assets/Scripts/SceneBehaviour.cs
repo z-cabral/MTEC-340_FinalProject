@@ -25,7 +25,7 @@ public class SceneBehaviour : MonoBehaviour
 
     public void NewGame()
     {
-        GuiBehaviour.Instance.ToggleMenu();
+        GuiBehaviour.Instance.Pause();
         SceneManager.UnloadSceneAsync(currentScene);
         SceneManager.LoadSceneAsync(1);
     }
