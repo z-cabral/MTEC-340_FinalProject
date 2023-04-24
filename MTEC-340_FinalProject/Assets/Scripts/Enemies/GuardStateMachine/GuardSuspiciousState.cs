@@ -18,7 +18,7 @@ public class GuardSuspiciousState : GuardBaseState
         guard.gameObject.transform.LookAt(guard.playerLast);
         //Stop Head Scanning Animation
         //Play Random VO
-        duration = 10f;
+        duration = 2f;
         timerIsRunning = true;
     }
 

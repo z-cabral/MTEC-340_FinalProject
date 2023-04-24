@@ -7,10 +7,13 @@ public class GameMenuState : GameBaseState
     public override void EnterState(GameStateMachine game)
     {
         //game.sceneBehaviour.LoadScene(0);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         game.gui.settingsMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+        game.gui.ResetGameOverScreen();
+        game.gui.GameOverScreen.SetActive(false);
+        Time.timeScale = 0f;
 
     }
 

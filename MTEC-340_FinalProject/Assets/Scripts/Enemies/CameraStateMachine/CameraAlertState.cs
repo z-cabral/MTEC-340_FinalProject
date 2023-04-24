@@ -10,6 +10,7 @@ public class CameraAlertState : CameraBaseState
         camera.Deactivateable = false;
         Debug.Log(camera.name + " is ALERT");
         //Trigger Game Over
+        GameStateMachine.Instance.SetState(GameStateMachine.Instance.gameOver);
     }
 
     public override void UpdateState(CameraStateMachine camera)

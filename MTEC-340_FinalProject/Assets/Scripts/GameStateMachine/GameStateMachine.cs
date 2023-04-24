@@ -12,6 +12,7 @@ public class GameStateMachine : MonoBehaviour
     public GameMenuState menuState = new ();
     public GamePlayState playState = new ();
     public GameLoadingState loadingState = new ();
+    public GameOverState gameOver = new ();
 
     bool _gameOver;
     public bool GameOver { get => _gameOver; set { _gameOver = value; } }

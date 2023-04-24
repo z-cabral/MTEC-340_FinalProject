@@ -10,6 +10,7 @@ public class GamePlayState : GameBaseState
         game.gui.settingsMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        game.gui.GameOverScreen.SetActive(false);
     }
 
     public override void UpdateState(GameStateMachine game)

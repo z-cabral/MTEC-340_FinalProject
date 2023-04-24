@@ -24,7 +24,7 @@ public class CameraUnalertState : CameraBaseState
         }
         else
         {
-            camera.playerLast = GameBehavior.Instance.PlayerPos.position;
+            camera.playerLast = PlayerStateMachine.Instance.transform.position;
             camera.SetState(camera.SuspiciousState);
         }
     }

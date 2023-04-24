@@ -46,12 +46,8 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            paused = !paused;
-        }
 
-        if (paused == false)
+        if (Time.timeScale != 0f)
         {
             if (axes == RotationAxes.MouseX)
             {

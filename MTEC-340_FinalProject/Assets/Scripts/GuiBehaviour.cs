@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using TMPro;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -10,12 +12,16 @@ using UnityEditor;
 public class GuiBehaviour : MonoBehaviour
 {
     public static GuiBehaviour Instance;
+    bool timerIsRunning = true;
+    public float duration = 10f;
+    float fadeAmount = 0f;
 
     public GameObject
         audioDisplaySettings,
         postProcessingSettings,
         gameplaySettings,
-        settingsMenu;
+        settingsMenu,
+        GameOverScreen;
 
     [SerializeField] AudioMixerSnapshot paused, unpaused;
 
@@ -33,12 +39,62 @@ public class GuiBehaviour : MonoBehaviour
         }
 
         audioDisplayControl = GameObject.Find("StartCam").GetComponent<AudioDisplayControl>();
-
+        
         //        audioDisplayControl.SetUpResolutions()
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         Cursor.lockState = CursorLockMode.Locked;
 
         ToggleMenu();
+    }
+    
+    public bool FadeOut()
+    {
+        //IEnumerator coroutine = FadeToBlack();
+        //bool finished;
+        float fadeSpeed = 1f;
+        //StartCoroutine(coroutine);
+        Image objectColor = GameOverScreen.GetComponent<Image>();
+
+        objectColor.color = Color.Lerp(objectColor.color, Color.black, fadeSpeed * Time.deltaTime);
+        if (objectColor.color.a >= 0.95f)
+            return true; // set a flag to indicate fade is finished
+        return false;
+    }
+
+    public void ResetGameOverScreen()
+    {
+        Color objectColor = GameOverScreen.GetComponent<Image>().color;
+
+        objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, 0);
+        GameOverScreen.GetComponent<Image>().color = objectColor;
+    }
+
+    public IEnumerator FadeToBlack(bool fadeToBlack = true, float fadeSpeed = 0.01f)
+    {
+        Color objectColor = GameOverScreen.GetComponent<Image>().color;
+        float fadeAmount = objectColor.a;
+
+        if (fadeToBlack)
+        {
+            while(GameOverScreen.GetComponent<Image>().color.a < 1)
+            {
+                fadeAmount += (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                GameOverScreen.GetComponent<Image>().color = objectColor;
+            }
+        }
+        else
+        {
+            while (GameOverScreen.GetComponent<Image>().color.a > 0)
+            {
+                fadeAmount -= (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                GameOverScreen.GetComponent<Image>().color = objectColor;
+            }
+        }
+        yield return new WaitForEndOfFrame();
     }
 
     public void Pause()

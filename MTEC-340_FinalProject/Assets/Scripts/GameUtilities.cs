@@ -15,8 +15,13 @@ public class GameUtilities : MonoBehaviour
         }
         else
         {
-            Debug.Log("No Save Data Found...");
+            Debug.Log("No Player Found...");
         }
+    }
+
+    public void LoadGame()
+    {
+        Debug.Log("No Save Data Found...");
     }
 
 

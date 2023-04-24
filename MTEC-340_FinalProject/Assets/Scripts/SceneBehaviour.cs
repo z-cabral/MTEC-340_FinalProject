@@ -29,18 +29,16 @@ public class SceneBehaviour : MonoBehaviour
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
+        if (index == 0)
+        {
+            GameStateMachine.Instance.SetState(GameStateMachine.Instance.menuState);
+        }
     }
 
     public void NewGame()
     {
         SceneManager.LoadScene(1);
         GameStateMachine.Instance.SetState(GameStateMachine.Instance.playState);
-    }
-
-    public void ChangeToScene(int index)
-    {
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadSceneAsync(index);
     }
 
     public void NextScene()
