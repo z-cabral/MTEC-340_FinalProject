@@ -40,7 +40,7 @@ public class PostProcessingControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //fxaaMenu = GameObject.Find("FXAA Settings");
+        //fxaaMenu = 
         //smaaMenu = GameObject.Find("SMAA Settings");
         //taaMenu = GameObject.Find("TAA Settings");
 
@@ -86,6 +86,11 @@ public class PostProcessingControl : MonoBehaviour
         _vignette.roundness.overrideState = true;
         _vignette.enabled.value = false;
 
+    }
+
+    private void Start()
+    {
+        _mainLayer = Camera.main.GetComponent<PostProcessLayer>();
     }
 
     // Update is called once per frame

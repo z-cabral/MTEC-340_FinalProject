@@ -62,7 +62,7 @@ public class GameBehavior : MonoBehaviour
         Debug.Log("I'm Loading...");
         PlayerData data = SaveSystem.LoadPlayer();
 
-        SceneBehaviour.Instance.ChangeToScene(data.scene + 1);
+        //SceneBehaviour.Instance.ChangeToScene(data.scene);
 
         GuiBehaviour.Instance.Pause();
 

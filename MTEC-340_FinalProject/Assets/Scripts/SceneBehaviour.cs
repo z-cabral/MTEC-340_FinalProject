@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneBehaviour : MonoBehaviour
 {
-    public static SceneBehaviour Instance;
+    //public static SceneBehaviour Instance;
 
-    public int currentScene;
-
-    private void Awake()
+/*    private void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -22,12 +20,21 @@ public class SceneBehaviour : MonoBehaviour
 
         DontDestroyOnLoad(Instance);
     }
+*/
+    //public bool SceneWasLoaded()
+    //{
+        //return SceneManager.activeSceneChanged;
+    //}
+
+    public void LoadScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
 
     public void NewGame()
     {
-        GuiBehaviour.Instance.Pause();
-        SceneManager.UnloadSceneAsync(currentScene);
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene(1);
+        GameStateMachine.Instance.SetState(GameStateMachine.Instance.playState);
     }
 
     public void ChangeToScene(int index)
@@ -38,9 +45,17 @@ public class SceneBehaviour : MonoBehaviour
 
     public void NextScene()
     {
-        currentScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.UnloadSceneAsync(currentScene);
-        SceneManager.LoadSceneAsync(currentScene + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void PreviousScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public int GetCurrentScene()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 
     public void QuitGame()

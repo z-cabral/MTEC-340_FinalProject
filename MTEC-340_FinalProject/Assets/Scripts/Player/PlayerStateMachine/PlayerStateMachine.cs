@@ -18,6 +18,7 @@ public class PlayerStateMachine : MonoBehaviour
     public FPSInput fpsInput;
     public LaserBehaviour laser;
     public MouseLook mouseHead, mouseBody;
+    public PlayerUtilities utils;
 
     private void OnLevelWasLoaded(int level)
     {

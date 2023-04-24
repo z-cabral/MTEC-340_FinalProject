@@ -11,7 +11,7 @@ public class GuiBehaviour : MonoBehaviour
 {
     public static GuiBehaviour Instance;
 
-    [SerializeField] GameObject
+    public GameObject
         audioDisplaySettings,
         postProcessingSettings,
         gameplaySettings,
@@ -32,8 +32,6 @@ public class GuiBehaviour : MonoBehaviour
             Instance = this;
         }
 
-        DontDestroyOnLoad(Instance);
-
         audioDisplayControl = GameObject.Find("StartCam").GetComponent<AudioDisplayControl>();
 
         //        audioDisplayControl.SetUpResolutions()
@@ -41,14 +39,6 @@ public class GuiBehaviour : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         ToggleMenu();
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Pause"))
-        {
-            Pause();
-        }
     }
 
     public void Pause()

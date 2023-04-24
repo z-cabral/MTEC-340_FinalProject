@@ -13,7 +13,7 @@ public class GuardUnalertState : GuardBaseState
     public override void UpdateState(GuardStateMachine guard)
     {
         //if (!guard.HeadSight.seenObject.TryGetComponent<MouseLook>(out MouseLook looker))
-        if(!guard.HeadSight.IntruderSearch(GameBehavior.Instance.Player))
+        if(!guard.HeadSight.IntruderSearch(PlayerStateMachine.Instance.gameObject))
         {
             //placeholder until NavMesh Movement is fully implemented
             //guard.EnemyMovement.Wander(10);
@@ -25,7 +25,7 @@ public class GuardUnalertState : GuardBaseState
         }
         else
         {
-            guard.playerLast = GameBehavior.Instance.PlayerPos.position;
+            guard.playerLast = PlayerStateMachine.Instance.transform.position;
             guard.SetState(guard.SuspiciousState);
         }     
     }
