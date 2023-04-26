@@ -9,6 +9,7 @@ public class FPSInput : MonoBehaviour
 {
     public float speed = 6.0f;
     public float gravity = -9.8f;
+    public bool isCrouched = false;
 
     private CharacterController _charControl;
 
@@ -24,9 +25,15 @@ public class FPSInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerMovement();
+    }
+
+
+    public void PlayerMovement()
+    {
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
-      
+
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
         movement = Vector3.ClampMagnitude(movement, speed);
         movement.y = gravity;
@@ -35,13 +42,30 @@ public class FPSInput : MonoBehaviour
         movement = transform.TransformDirection(movement);
         _charControl.Move(movement);
 
-        charHeightTarget = 1+Input.GetAxis("Crouch")*0.75f;
-
-        charHeightCur = Mathf.MoveTowards(charHeightCur, 2 * charHeightTarget, speed * Time.deltaTime);
-        _charControl.height = charHeightCur;
-
-        charCenterY = 0.5f - charHeightCur / 2;        
-        _charControl.center = new Vector3(0, charCenterY, 0);
+        PlayerCrouch();
     }
 
+    public void PlayerCrouch()
+    {
+        if(isCrouched == false)
+        {
+            charHeightTarget = 1 + Input.GetAxis("Crouch") * 0.75f;
+
+            charHeightCur = Mathf.MoveTowards(charHeightCur, 2 * charHeightTarget, speed * Time.deltaTime);
+            _charControl.height = charHeightCur;
+
+            charCenterY = 0.5f - charHeightCur / 2;
+            _charControl.center = new Vector3(0, charCenterY, 0);
+
+            if (charHeightCur == 0.5)
+            {
+                isCrouched = true;
+            }
+        }
+        else if(isCrouched && Physics.Raycast(transform.position, transform.up, 2) == false)
+        {
+            isCrouched = false;
+        }
+
+    }
 }

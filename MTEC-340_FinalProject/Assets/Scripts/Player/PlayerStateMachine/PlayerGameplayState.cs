@@ -11,6 +11,7 @@ public class PlayerGameplayState : PlayerBaseState
 
     public override void UpdateState(PlayerStateMachine player)
     {
+        //player.utils.detectRays();
         if (player.isInvisible)
         {
             player.SetState(player.InvisibleState);

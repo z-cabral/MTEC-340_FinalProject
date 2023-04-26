@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-
+    //PlayerStateMachine Player;
     public enum RotationAxes
     {
         MouseXAndY = 0,
@@ -32,8 +32,11 @@ public class MouseLook : MonoBehaviour
 
     private bool paused;
 
+
+
     private void Awake()
     {
+
         if (_Pivot == null && transform.parent != null) _Pivot = transform.parent;
     }
 
@@ -46,7 +49,12 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        Look();
 
+    }
+
+    public void Look()
+    {
         if (Time.timeScale != 0f)
         {
             if (axes == RotationAxes.MouseX)
@@ -62,9 +70,7 @@ public class MouseLook : MonoBehaviour
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
 
-                curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
-                _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
-
+                Peek();
             }
             else
             {
@@ -76,15 +82,23 @@ public class MouseLook : MonoBehaviour
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
 
-                curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * -Input.GetAxis("Lean"), speed * Time.deltaTime);
-                _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
-
+                Peek();
             }
         }
+    }
 
-        //_rotationZ = Mathf.LerpAngle(30, -30, Input.GetAxis("Lean") + .5f);
+    public void Peek()
+    {
+        RaycastHit hit;
 
-
-
+        //if(Physics.Raycast(ray, out hit, 100))
+        if (Physics.Raycast(transform.right, transform.right*2, out hit, 10f) == false 
+            || Physics.Raycast(-transform.right, -transform.right*2, out hit, 10f) == false)
+        {
+            Debug.Log(hit);
+            Debug.Log(hit.distance);
+            curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
+            _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
+        }
     }
 }

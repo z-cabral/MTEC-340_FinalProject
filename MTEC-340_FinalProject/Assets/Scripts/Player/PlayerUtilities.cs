@@ -4,7 +4,25 @@ using UnityEngine;
 
 public class PlayerUtilities : MonoBehaviour
 {
+    public Ray up, left, right;
 
+    PlayerStateMachine Player;
+
+    private void Awake()
+    {
+        Player = GetComponent<PlayerStateMachine>();
+    }
+
+    public void Update()
+    {
+        up.origin = transform.position;
+        right.origin = transform.position;
+        left.origin = transform.position;
+
+        up.direction = transform.up;
+        right.direction = transform.right;
+        left.direction = -transform.right;
+    }
     private void SetPosition(Vector3 position)
     {
         this.transform.position = position;

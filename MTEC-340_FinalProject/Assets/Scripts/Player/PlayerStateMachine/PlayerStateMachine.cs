@@ -20,9 +20,18 @@ public class PlayerStateMachine : MonoBehaviour
     public MouseLook mouseHead, mouseBody;
     public PlayerUtilities utils;
 
-    private void OnLevelWasLoaded(int level)
+    private void OnLevelWasLoaded(int scene)
     {
-        GameBehavior.Instance.SetupPlayer();
+        //GameBehavior.Instance.SetupPlayer();
+        if (scene > 1)
+        {
+            this.transform.SetLocalPositionAndRotation(GameStateMachine.Instance.utils.position, GameStateMachine.Instance.utils.rotation);
+        }
+        if(scene > 0)
+        {
+            GameStateMachine.Instance.SetState(GameStateMachine.Instance.playState);
+        }
+
     }
 
     private void Awake()
