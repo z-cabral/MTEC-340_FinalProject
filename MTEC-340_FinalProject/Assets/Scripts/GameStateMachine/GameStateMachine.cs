@@ -41,6 +41,8 @@ public class GameStateMachine : MonoBehaviour
 
     }
 
+
+
     void Start()
     {
         SetState(menuState);

@@ -44,43 +44,43 @@ public class PostProcessingControl : MonoBehaviour
         //smaaMenu = GameObject.Find("SMAA Settings");
         //taaMenu = GameObject.Find("TAA Settings");
 
-        _mainLayer = GetComponent<PostProcessLayer>();
+       // _mainLayer = GetComponent<PostProcessLayer>();
         _mainVolume = GetComponent<PostProcessVolume>();
 
-        _mainVolume.sharedProfile.AddSettings<AmbientOcclusion>();
-        _ambientOcclusion = _mainVolume.sharedProfile.GetSetting<AmbientOcclusion>();
+        _mainProfile.AddSettings<AmbientOcclusion>();
+        _ambientOcclusion = _mainProfile.GetSetting<AmbientOcclusion>();
         _ambientOcclusion.intensity.overrideState = true;
         _ambientOcclusion.thicknessModifier.overrideState = true;
         _ambientOcclusion.enabled.value= false;
 
-        _mainVolume.sharedProfile.AddSettings<Bloom>();
-        _bloom = _mainVolume.sharedProfile.GetSetting<Bloom>();
+        _mainProfile.AddSettings<Bloom>();
+        _bloom = _mainProfile.GetSetting<Bloom>();
         _bloom.intensity.overrideState = true;
         _bloom.fastMode.overrideState = true;
         _bloom.enabled.value = false;
 
-        _mainVolume.sharedProfile.AddSettings<ChromaticAberration>();
-        _chromaticAberration = _mainVolume.sharedProfile.GetSetting<ChromaticAberration>();
+        _mainProfile.AddSettings<ChromaticAberration>();
+        _chromaticAberration = _mainProfile.GetSetting<ChromaticAberration>();
         _chromaticAberration.intensity.overrideState = true;
         _chromaticAberration.fastMode.overrideState = true;
         _chromaticAberration.enabled.value = false;
 
-        _mainVolume.sharedProfile.AddSettings<DepthOfField>();
-        _depthOfField = _mainVolume.sharedProfile.GetSetting<DepthOfField>();
+        _mainProfile.AddSettings<DepthOfField>();
+        _depthOfField = _mainProfile.GetSetting<DepthOfField>();
         _depthOfField.enabled.value = false;
 
-        _mainVolume.sharedProfile.AddSettings<Grain>();
-        _grain = _mainVolume.sharedProfile.GetSetting<Grain>();
+        _mainProfile.AddSettings<Grain>();
+        _grain = _mainProfile.GetSetting<Grain>();
         _grain.colored.overrideState = true;
         _grain.intensity.overrideState = true;
         _grain.enabled.value = false;
 
-        _mainVolume.sharedProfile.AddSettings<MotionBlur>();
-        _motionBlur = _mainVolume.sharedProfile.GetSetting<MotionBlur>();
+        _mainProfile.AddSettings<MotionBlur>();
+        _motionBlur = _mainProfile.GetSetting<MotionBlur>();
         _motionBlur.enabled.value = false;
 
-        _mainVolume.sharedProfile.AddSettings<Vignette>();
-        _vignette = _mainVolume.sharedProfile.GetSetting<Vignette>();
+        _mainProfile.AddSettings<Vignette>();
+        _vignette = _mainProfile.GetSetting<Vignette>();
         _vignette.intensity.overrideState = true;
         _vignette.smoothness.overrideState = true;
         _vignette.roundness.overrideState = true;
@@ -91,6 +91,14 @@ public class PostProcessingControl : MonoBehaviour
     private void Start()
     {
         _mainLayer = Camera.main.GetComponent<PostProcessLayer>();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        _mainLayer = Camera.main.GetComponent<PostProcessLayer>();
+        //_mainLayer./
+
+
     }
 
     // Update is called once per frame

@@ -11,6 +11,10 @@ public class PlayerGameplayState : PlayerBaseState
 
     public override void UpdateState(PlayerStateMachine player)
     {
+        //player.mouseHead.Look();
+        //player.mouseBody.Look();
+
+        player.fpsInput.PlayerMovement();
         //player.utils.detectRays();
         if (player.isInvisible)
         {

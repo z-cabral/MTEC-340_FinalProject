@@ -13,7 +13,7 @@ public class FPSInput : MonoBehaviour
 
     private CharacterController _charControl;
 
-    [SerializeField] float charHeightCur=2f, charHeightTarget=2f, charCenterY;
+    [SerializeField] float charHeightCur=2f, charHeightTarget, charCenterY, charSpeedTarget;
 
     public float target;
 
@@ -25,7 +25,7 @@ public class FPSInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMovement();
+        //PlayerMovement();
     }
 
 
@@ -51,6 +51,8 @@ public class FPSInput : MonoBehaviour
         {
             charHeightTarget = 1 + Input.GetAxis("Crouch") * 0.75f;
 
+            //speed = Mathf.MoveTowards(speed, 2 * charSpeedTarget, speed * Time.deltaTime);
+
             charHeightCur = Mathf.MoveTowards(charHeightCur, 2 * charHeightTarget, speed * Time.deltaTime);
             _charControl.height = charHeightCur;
 
@@ -64,8 +66,15 @@ public class FPSInput : MonoBehaviour
         }
         else if(isCrouched && Physics.Raycast(transform.position, transform.up, 2) == false)
         {
+
             isCrouched = false;
+
         }
+
+            charSpeedTarget = 6 + Input.GetAxis("Crouch") * 3;
+            speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
+
+            speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
 
     }
 }

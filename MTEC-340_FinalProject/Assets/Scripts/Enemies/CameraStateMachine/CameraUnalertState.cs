@@ -13,9 +13,9 @@ public class CameraUnalertState : CameraBaseState
 
     public override void UpdateState(CameraStateMachine camera)
     {
-        if (!camera.HeadSight.seenObject.CompareTag("Player"))
+        if (!camera.HeadSight.IntruderSearch(PlayerStateMachine.Instance.gameObject))
         {
-            //scan area
+            //scan area animation
 
             if (camera.IsPowered == false)
             {
