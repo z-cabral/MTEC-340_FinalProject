@@ -6,6 +6,7 @@ public class ExitDoorBehaviour : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameStateMachine.Instance.SetState(GameStateMachine.Instance.gameOver);
+        //GameStateMachine.Instance.SetState(GameStateMachine.Instance.gameOver);
+        GameStateMachine.Instance.sceneBehaviour.NextScene();
     }
 }
