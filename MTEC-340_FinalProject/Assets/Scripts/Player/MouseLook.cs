@@ -92,13 +92,13 @@ public class MouseLook : MonoBehaviour
         RaycastHit hit;
 
         //if(Physics.Raycast(ray, out hit, 100))
-        if (Physics.Raycast(transform.right, transform.right*2, out hit, 10f) == false 
-            || Physics.Raycast(-transform.right, -transform.right*2, out hit, 10f) == false)
-        {
+        //if (Physics.Raycast(transform.right, transform.right*2, out hit, 10f) == false 
+        //    || Physics.Raycast(-transform.right, -transform.right*2, out hit, 10f) == false)
+        //{
             //Debug.Log(hit);
             //Debug.Log(hit.distance);
             curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
             _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
-        }
+        //}
     }
 }

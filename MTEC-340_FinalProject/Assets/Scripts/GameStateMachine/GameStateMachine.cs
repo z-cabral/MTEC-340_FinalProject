@@ -17,6 +17,9 @@ public class GameStateMachine : MonoBehaviour
     bool _gameOver;
     public bool GameOver { get => _gameOver; set { _gameOver = value; } }
 
+    bool _isLoadingSaveData;
+    public bool IsLoadingSaveData { get => _isLoadingSaveData; set { _isLoadingSaveData = value; } }
+
     public SceneBehaviour sceneBehaviour;
     public GuiBehaviour gui;
     public GameUtilities utils;

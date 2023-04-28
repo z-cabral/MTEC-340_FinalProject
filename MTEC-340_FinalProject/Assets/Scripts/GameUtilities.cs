@@ -26,8 +26,9 @@ public class GameUtilities : MonoBehaviour
     public void LoadGame()
     {
         //GameStateMachine.Instance.SetState(GameStateMachine.Instance.loadingState);
+        GameStateMachine.Instance.IsLoadingSaveData = true;
         LoadPlayer();
-
+        GameStateMachine.Instance.IsLoadingSaveData = false;
 
         //PlayerStateMachine.Instance.transform.SetPositionAndRotation(transform.position, transform.rotation);
 

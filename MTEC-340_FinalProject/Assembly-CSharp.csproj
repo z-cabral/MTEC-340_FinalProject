@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Player\FPSInput.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerUtilities.cs" />
+    <Compile Include="Assets\_Barking_Dog\Common Scripts\Turn_Move.cs" />
     <Compile Include="Assets\Scripts\Enemies\GuardStateMachine\GuardBaseState.cs" />
     <Compile Include="Assets\Scripts\GameStateMachine\GameStateMachine.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
@@ -94,8 +95,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerStateMachine\PlayerBaseState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateMachine\PlayerGameplayState.cs" />
     <Compile Include="Assets\Scripts\ExitDoorBehaviour.cs" />
-    <Compile Include="Assets\_Barking_Dog\Common Scripts\Turn_Move.cs" />
     <Compile Include="Assets\_Barking_Dog\Common Scripts\MouseLooL.cs" />
+    <Compile Include="Assets\Scripts\DepthOfFieldControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

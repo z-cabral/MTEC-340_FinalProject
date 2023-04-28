@@ -29,6 +29,7 @@ public class SceneBehaviour : MonoBehaviour
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
+        
         if (index == 0)
         {
             GameStateMachine.Instance.SetState(GameStateMachine.Instance.menuState);

@@ -23,11 +23,14 @@ public class PlayerStateMachine : MonoBehaviour
     private void OnLevelWasLoaded(int scene)
     {
         //GameBehavior.Instance.SetupPlayer();
-        if (scene > 1)
+        if(GameStateMachine.Instance.IsLoadingSaveData == true)
         {
-            this.transform.SetLocalPositionAndRotation(GameStateMachine.Instance.utils.position, GameStateMachine.Instance.utils.rotation);
+            if (scene > 1)
+            {
+                this.transform.SetLocalPositionAndRotation(GameStateMachine.Instance.utils.position, GameStateMachine.Instance.utils.rotation);
+            }
         }
-        if(scene > 0)
+        if (scene > 0)
         {
             GameStateMachine.Instance.SetState(GameStateMachine.Instance.playState);
         }

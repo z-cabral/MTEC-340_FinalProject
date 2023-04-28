@@ -239,8 +239,8 @@ MonoBehaviour:
   aoSettings: {fileID: 1412533035}
   bloomSettings: {fileID: 1920473583}
   caSettings: {fileID: 1444002447}
-  grainSettings: {fileID: 2023616815}
-  vignetteSettings: {fileID: 393648281}
+  grainSettings: {fileID: 746822734}
+  vignetteSettings: {fileID: 1672583613}
 --- !u!114 &38803905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,11 +1279,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
   m_PrefabInstance: {fileID: 379743446}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &393648281 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3148264549793847642, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
-  m_PrefabInstance: {fileID: 882456136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &396074845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2190,6 +2185,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8270482812594059227, guid: 6f6bfe855867ceb46a727b34cd4977f2, type: 3}
   m_PrefabInstance: {fileID: 733434449}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &746822734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3148264550376449423, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+  m_PrefabInstance: {fileID: 882456136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789993468 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3148264550733530397, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
@@ -2563,10 +2563,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 38803904}
-    - target: {fileID: 3148264550113311130, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleVignette
-      objectReference: {fileID: 0}
     - target: {fileID: 3148264550126016175, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2760,6 +2756,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 38803904}
     - target: {fileID: 3148264550901890084, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550901890084, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 38803904}
@@ -2835,10 +2835,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 38803904}
-    - target: {fileID: 3148264551710863971, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleGrain
-      objectReference: {fileID: 0}
     - target: {fileID: 3148264551821789458, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -4996,6 +4992,11 @@ MonoBehaviour:
   gui: {fileID: 0}
   utils: {fileID: 0}
   ppc: {fileID: 0}
+--- !u!1 &1672583613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3148264551591838825, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+  m_PrefabInstance: {fileID: 882456136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1695551782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5795,11 +5796,6 @@ Transform:
   m_Father: {fileID: 1309809843}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2023616815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3148264550217960235, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
-  m_PrefabInstance: {fileID: 882456136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2025332376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6128,6 +6124,7 @@ GameObject:
   - component: {fileID: 2107396797}
   - component: {fileID: 2107396796}
   - component: {fileID: 2107396800}
+  - component: {fileID: 2107396801}
   m_Layer: 6
   m_Name: StartCam
   m_TagString: MainCamera
@@ -6278,3 +6275,17 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &2107396801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107396790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea95b1536b79dd9419851724bd926907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainProfile: {fileID: 11400000, guid: 9503aa375911e4bf299718d0611940b2, type: 2}
+  delta: 100

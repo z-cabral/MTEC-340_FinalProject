@@ -67,6 +67,9 @@ public class PostProcessingControl : MonoBehaviour
 
         _mainProfile.AddSettings<DepthOfField>();
         _depthOfField = _mainProfile.GetSetting<DepthOfField>();
+        _depthOfField.focusDistance.overrideState = true;
+        _depthOfField.aperture.overrideState = true;
+        _depthOfField.focalLength.overrideState = true;
         _depthOfField.enabled.value = false;
 
         _mainProfile.AddSettings<Grain>();
