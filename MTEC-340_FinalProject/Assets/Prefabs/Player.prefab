@@ -194,6 +194,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c7ae9ef214442968eace454a5a6b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLean:
+    m_Name: Player Lean
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6fba60f5-a065-4588-a268-1e934b924957
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 3D Vector
+      m_Id: bfa899ae-e825-4aaf-9165-a6829a84ebbb
+      m_Path: 3DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 02a62a8f-1417-4769-b649-dd0bd0558d01
+      m_Path: <Mouse>/delta/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 49809e52-30a5-4da8-a9d8-99b9020290b1
+      m_Path: <Mouse>/delta/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 2e3787b5-97d2-4710-bd9f-f764e7405f9d
+      m_Path: <Mouse>/delta/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 36c0f56b-494c-4991-bd5c-626925959822
+      m_Path: <Mouse>/delta/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: forward
+      m_Id: 1ef2030b-06c1-4a1d-bdef-d0805b8689fd
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: backward
+      m_Id: aa61897c-14b7-42fd-941a-6f137367f4c1
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    m_Flags: 0
   axes: 2
   sensitivityHor: 9
   sensitivityVert: 9
@@ -512,6 +577,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c7ae9ef214442968eace454a5a6b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLean:
+    m_Name: Player Lean
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0dd996f6-4e30-443d-ac88-c92c9371b2d6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 3D Vector
+      m_Id: 12bef5ff-04e6-41bc-9bb4-96bb3ddce46f
+      m_Path: 3DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 4
+    - m_Name: up
+      m_Id: a4172fb6-2892-421c-bd54-d50134690b20
+      m_Path: <Mouse>/delta/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 615c6d3c-7213-4636-bb6d-930dd9041757
+      m_Path: <Mouse>/delta/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: left
+      m_Id: d0588d9e-2255-4884-ba46-aeb52f04be19
+      m_Path: <Mouse>/delta/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 7005b997-100e-4c79-aa6c-112ad521d172
+      m_Path: <Mouse>/delta/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: forward
+      m_Id: cecfff38-d1d4-4b09-9348-2779ee0bcc95
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    - m_Name: backward
+      m_Id: 36adfa8f-075d-48fc-8362-a7cb5da3e482
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Lean
+      m_Flags: 8
+    m_Flags: 0
   axes: 1
   sensitivityHor: 9
   sensitivityVert: 9
@@ -535,6 +665,71 @@ MonoBehaviour:
   speed: 6.5
   gravity: -9.8
   isCrouched: 0
+  playerControls:
+    m_Name: Player Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7f1125a9-9074-4c6d-9507-9ba372edb13f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 3D Vector
+      m_Id: 20e70bf6-59fe-4d6b-9a5d-8b3f122b7c2d
+      m_Path: 3DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 4
+    - m_Name: up
+      m_Id: cd427c89-36c2-4708-a00d-26137c94429e
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 6d2867c6-a3e9-44e1-9a54-23466cc52057
+      m_Path: <Keyboard>/ctrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: left
+      m_Id: a726ebd3-6def-490e-8660-618092e1a3fd
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: right
+      m_Id: c4e53c4e-34c9-46c7-ae87-607f185ae17e
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: forward
+      m_Id: 08ee9452-f9ff-4367-8f18-a3c4f0c6db87
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: backward
+      m_Id: c33fb24a-5363-4662-840b-17bab5172e6c
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    m_Flags: 0
   charHeightCur: 2
   charHeightTarget: 0
   charCenterY: 0

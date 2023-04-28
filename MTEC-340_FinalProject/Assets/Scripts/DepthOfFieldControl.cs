@@ -38,12 +38,8 @@ public class DepthOfFieldControl : MonoBehaviour
 
             //delta *= Time.deltaTime;
 
-            Debug.Log("delta: " + delta);
-            Debug.Log("fixedDeltaTime: " + Time.fixedDeltaTime);
-            Debug.Log("deltaTime: " + Time.deltaTime);
-
             focusDistance = (Mathf.Lerp(focusDistance, hitDistance, delta * Time.deltaTime));
-            Debug.Log(focusDistance);
+
             _depthOfField2.focusDistance.value = focusDistance;
             //_depthOfField2.focalLength.value = (Mathf.MoveTowards(_depthOfField2.focalLength.value, hitDistance*.125f, delta ));
         }

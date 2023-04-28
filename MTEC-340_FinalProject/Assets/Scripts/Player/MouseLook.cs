@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
@@ -12,10 +13,14 @@ public class MouseLook : MonoBehaviour
         MouseY = 2
     }
 
+    private Vector3 playerLook;
+
+    public InputAction playerLean;
+
     public RotationAxes axes = RotationAxes.MouseXAndY;
 
-    public float sensitivityHor = 9.0f;
-    public float sensitivityVert = 9.0f;
+    public float sensitivityHor = 1f;
+    public float sensitivityVert = 0.5f;
 
     public float minimumVert = -45.0f;
     public float maximumVert = 45.0f;
@@ -32,7 +37,15 @@ public class MouseLook : MonoBehaviour
 
     private bool paused;
 
+    private void OnEnable()
+    {
+        playerLean.Enable();
+    }
 
+    private void OnDisable()
+    {
+        playerLean.Disable();
+    }
 
     private void Awake()
     {
@@ -55,15 +68,19 @@ public class MouseLook : MonoBehaviour
 
     public void Look()
     {
+        playerLook = playerLean.ReadValue<Vector3>();
+
         if (Time.timeScale != 0f)
         {
             if (axes == RotationAxes.MouseX)
             {
-                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+                //transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+                transform.Rotate(0, playerLook.x * sensitivityHor * 0.01f, 0);
             }
             else if (axes == RotationAxes.MouseY)
             {
-                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                //_rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                _rotationX -= playerLook.y * sensitivityVert * 0.1f;
                 _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
                 float rotationY = transform.localEulerAngles.y;
@@ -74,10 +91,12 @@ public class MouseLook : MonoBehaviour
             }
             else
             {
-                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                //_rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                _rotationX -= playerLook.y;
                 _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
-                float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+                //float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+                float delta = playerLook.x;
                 float rotationY = transform.localEulerAngles.y + delta;
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
@@ -95,10 +114,21 @@ public class MouseLook : MonoBehaviour
         //if (Physics.Raycast(transform.right, transform.right*2, out hit, 10f) == false 
         //    || Physics.Raycast(-transform.right, -transform.right*2, out hit, 10f) == false)
         //{
-            //Debug.Log(hit);
-            //Debug.Log(hit.distance);
-            curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
-            _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
+        //Debug.Log(hit);
+        //Debug.Log(hit.distance);
+        //curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
+          curAngle = Mathf.MoveTowardsAngle(curAngle, -maxLeanAngle * playerLook.z, speed * Time.deltaTime);
+        _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
         //}
+    }
+
+    public void AdjustMouseSensX(float sens)
+    {
+        sensitivityHor = sens;
+    }
+
+    public void AdjustMouseSensY(float sens)
+    {
+        sensitivityVert = sens;
     }
 }

@@ -56,7 +56,7 @@ public class CameraSuspiciousState : CameraBaseState
 
     private void EnemySpotted(CameraStateMachine camera)
     {
-        if (!camera.HeadSight.seenObject.CompareTag("Player"))
+        if (!camera.HeadSight.IntruderSearch(PlayerStateMachine.Instance.gameObject) && !PlayerStateMachine.Instance.isInvisible)
         {
             //Play Random "Must've been the wind..." VO
             camera.SetState(camera.UnalertState);

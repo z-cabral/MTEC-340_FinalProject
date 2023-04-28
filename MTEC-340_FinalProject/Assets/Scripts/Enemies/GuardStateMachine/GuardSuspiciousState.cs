@@ -18,7 +18,7 @@ public class GuardSuspiciousState : GuardBaseState
         guard.gameObject.transform.LookAt(guard.playerLast);
         //Stop Head Scanning Animation
         //Play Random VO
-        duration = 2f;
+        duration = 5f;
         timerIsRunning = true;
     }
 
@@ -62,7 +62,7 @@ public class GuardSuspiciousState : GuardBaseState
 
     private void EnemySpotted(GuardStateMachine guard)
     {
-        if (!guard.HeadSight.IntruderSearch(GameBehavior.Instance.Player) && !GameBehavior.Instance.Player.GetComponent<PlayerStateMachine>().isInvisible)
+        if (!guard.HeadSight.IntruderSearch(PlayerStateMachine.Instance.gameObject) && !PlayerStateMachine.Instance.isInvisible)
         {
             //Play Random "Must've been the wind..." VO
             guard.SetState(guard.UnalertState);

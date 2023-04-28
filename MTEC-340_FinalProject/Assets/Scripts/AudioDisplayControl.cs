@@ -21,7 +21,7 @@ public class AudioDisplayControl : MonoBehaviour
 
     public void Start()
     {
-
+        SetUpResolutions(resolutions);
     }
 
     public void SetFullScreen(bool isFullScreen)

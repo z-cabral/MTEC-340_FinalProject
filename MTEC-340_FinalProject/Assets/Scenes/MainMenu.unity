@@ -2535,6 +2535,10 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleBloomFastMode
       objectReference: {fileID: 0}
+    - target: {fileID: 3148264549995888277, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3148264550016576410, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2542,6 +2546,18 @@ PrefabInstance:
     - target: {fileID: 3148264550016576410, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleCAFastMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550025421978, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550025421978, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550055164690, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550077999979, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2558,6 +2574,14 @@ PrefabInstance:
     - target: {fileID: 3148264550083572244, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AdjustMasterLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550090845395, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_MaxValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550090845395, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_MinValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550113311130, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2683,6 +2707,14 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleAmbientOcclusion
       objectReference: {fileID: 0}
+    - target: {fileID: 3148264550418025742, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_MaxValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550418025742, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_MinValue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3148264550478233455, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2714,6 +2746,14 @@ PrefabInstance:
     - target: {fileID: 3148264550631572128, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: FunctionalityMisisng
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550707273293, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550707273293, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550722045311, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2751,6 +2791,18 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AudioDisplayControl, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3148264550892962642, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550892962642, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550892962642, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3148264550896017475, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2766,6 +2818,18 @@ PrefabInstance:
     - target: {fileID: 3148264550901890084, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AdjustVignetteRoundness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550986597493, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550986597493, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550986597493, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3148264551096746787, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
