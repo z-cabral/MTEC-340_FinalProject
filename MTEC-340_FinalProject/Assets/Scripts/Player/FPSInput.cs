@@ -88,19 +88,24 @@ public class FPSInput : MonoBehaviour
         }
         else if(isCrouched && Physics.Raycast(transform.position, transform.up, 2) == false)
         {
-
-            isCrouched = false;
-
+            if (newMovement.y >= 0f)
+            {
+                isCrouched = false;
+            }
         }
 
-        if (newMovement.y <= 0)
-        {
+        //if (newMovement.y <= 0)
+        //{
             charSpeedTarget = 6 + newMovement.y * 3;
-            speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
-
-            //speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
-        }
+            if (isCrouched)
+            {
+                speed = Mathf.MoveTowards(speed, 3, 3 * Time.deltaTime);
+            }
+            else
+            {
+                speed = Mathf.MoveTowards(speed, 6, 4 * Time.deltaTime);
+            }
+        //}
             //charSpeedTarget = 6 + Input.GetAxis("Crouch") * 3;
-
     }
 }

@@ -16,7 +16,8 @@ public class MouseLook : MonoBehaviour
     private Vector3 playerLook;
 
     public InputAction playerLean;
-    
+
+    public bool canLean=true;
 
     public RotationAxes axes = RotationAxes.MouseXAndY;
 
@@ -87,8 +88,8 @@ public class MouseLook : MonoBehaviour
                 float rotationY = transform.localEulerAngles.y;
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
-
-                Peek();
+                if (canLean)
+                    Peek();
             }
             else
             {
@@ -102,7 +103,8 @@ public class MouseLook : MonoBehaviour
 
                 transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
 
-                Peek();
+                if (canLean)
+                    Peek();
             }
         }
     }
@@ -112,17 +114,18 @@ public class MouseLook : MonoBehaviour
         RaycastHit hit;
 
         //if(Physics.Raycast(ray, out hit, 100))
-        //if (Physics.Raycast(transform.right, transform.right*2, out hit, 10f) == false 
-        //    || Physics.Raycast(-transform.right, -transform.right*2, out hit, 10f) == false)
-        //{
-        //Debug.Log(hit);
-        //Debug.Log(hit.distance);
+        if (Physics.Raycast(transform.up, transform.right, out hit, 0.2f) == false )
+        {
+        Debug.Log(hit);
+        Debug.Log(hit.point);
+            Debug.DrawRay(transform.up, transform.right, Color.white, 0.2f);
         //curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
           curAngle = Mathf.MoveTowardsAngle(curAngle, -maxLeanAngle * playerLook.z, speed * Time.deltaTime);
         _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
-        //}
+        }
     }
 
+    
     public void AdjustMouseSensX(float sens)
     {
         sensitivityHor = sens;
