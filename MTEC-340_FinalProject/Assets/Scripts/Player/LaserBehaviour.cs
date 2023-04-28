@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LaserBehaviour : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class LaserBehaviour : MonoBehaviour
     [SerializeField] Transform laser;
     private float cooldown = 0f;
 
+    public InputAction playerLaser;
+    public InputAction playerInteract;
+    float fire, interact;
     void Start()
     {
         _camera = GetComponent<Camera>();
@@ -28,8 +32,24 @@ public class LaserBehaviour : MonoBehaviour
         GUI.Label(new Rect(posX, posY, size, size), "*");
     }
 
+    void OnEnable()
+    {
+        playerLaser.Enable();
+        playerInteract.Enable();
+    }
+
+    void OnDisable()
+    {
+        playerLaser.Disable();
+        playerInteract.Disable();
+    }
+
     private void Update()
     {
+        //fire = 
+
+
+
         if (cooldown > 0f)
         {
             cooldown -= Time.deltaTime;
@@ -37,7 +57,9 @@ public class LaserBehaviour : MonoBehaviour
         }
         else if (cooldown <= 0f)
         {
-            if (Input.GetButtonDown("Fire1"))
+
+            //if (Input.GetButtonDown("Fire1"))
+            if (playerLaser.WasPressedThisFrame())
             {
                 laser.gameObject.SetActive(true);
 
@@ -71,12 +93,14 @@ public class LaserBehaviour : MonoBehaviour
             }          
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        //if (Input.GetButtonUp("Fire1"))
+        if (playerLaser.WasReleasedThisFrame())
         {
             laser.gameObject.SetActive(false);
         }
 
-        if (Input.GetButtonDown("Interact"))
+        //if (Input.GetButtonDown("Interact"))
+        if (playerInteract.WasPressedThisFrame()) 
         {
             Ray playerLook = PlayerLookAt();
 

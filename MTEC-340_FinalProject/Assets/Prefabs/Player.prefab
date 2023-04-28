@@ -280,6 +280,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 7728778216724528386}
+  playerLaser:
+    m_Name: Player Laser
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4ca5a2ee-b48f-4f12-ab04-b8a850deee8f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 407e47ec-3598-4792-8771-47b69b6c2e89
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Laser
+      m_Flags: 0
+    m_Flags: 0
+  playerInteract:
+    m_Name: Player Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c4c9e33b-44ea-4cb5-a1c3-566b08e52eec
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f122b156-690e-43b1-b796-b0dcdc6f1443
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Interact
+      m_Flags: 0
+    m_Flags: 0
 --- !u!114 &7728778216315905697
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2557,7 +2557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550055164690, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550077999979, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2576,12 +2576,16 @@ PrefabInstance:
       value: AdjustMasterLevel
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550090845395, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550090845395, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_MaxValue
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550090845395, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_MinValue
-      value: 0
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550113311130, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2708,12 +2712,16 @@ PrefabInstance:
       value: ToggleAmbientOcclusion
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550418025742, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148264550418025742, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_MaxValue
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550418025742, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_MinValue
-      value: 0
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 3148264550478233455, guid: ed2be913971bdcf4893d60c4a904adee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

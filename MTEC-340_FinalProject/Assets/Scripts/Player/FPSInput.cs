@@ -98,7 +98,7 @@ public class FPSInput : MonoBehaviour
             charSpeedTarget = 6 + newMovement.y * 3;
             speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
 
-            speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
+            //speed = Mathf.MoveTowards(speed, charSpeedTarget, 3 * Time.deltaTime);
         }
             //charSpeedTarget = 6 + Input.GetAxis("Crouch") * 3;
 
