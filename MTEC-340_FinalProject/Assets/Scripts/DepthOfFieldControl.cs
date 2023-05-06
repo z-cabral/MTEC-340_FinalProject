@@ -20,7 +20,7 @@ public class DepthOfFieldControl : MonoBehaviour
         _camera = GetComponent<Camera>();
         _depthOfField2 = _mainProfile.GetSetting<DepthOfField>();
         _depthOfField2.focalLength.value = 120f;
-        _depthOfField2.aperture.value = 11f;
+        _depthOfField2.aperture.value = 22f;
     }
 
     void Update()

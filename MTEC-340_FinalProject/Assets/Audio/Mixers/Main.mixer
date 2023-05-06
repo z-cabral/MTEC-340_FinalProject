@@ -116,7 +116,50 @@ AudioMixerSnapshotController:
   m_SnapshotID: f24a6787592eb4580a57b16e74650e87
   m_FloatValues:
     7573c9b0e5444474d9b587b2ee38dbfe: 0
+    d68b2c836b3992d49a087a57400bd411: -6
   m_TransitionOverrides: {}
+--- !u!244 &1266511043101434567
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d028705178bc1714785faff9181be18f
+  m_EffectName: Send
+  m_MixLevel: d68b2c836b3992d49a087a57400bd411
+  m_Parameters: []
+  m_SendTarget: {fileID: 2104517877228665194}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &2104517877228665194
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 4a19bbc9f67af324ab1d11c84f65ed40
+  m_EffectName: Duck Volume
+  m_MixLevel: c7f5232f97f90f04192cfeba75b3e6a1
+  m_Parameters:
+  - m_ParameterName: Threshold
+    m_GUID: ef0f0f3c32f304747aba5978c2cb3aec
+  - m_ParameterName: Ratio
+    m_GUID: 1aee89c21d04c6b42bbe274a7ea1a3b7
+  - m_ParameterName: Attack Time
+    m_GUID: ad523a177a815f544853d50c44c55c51
+  - m_ParameterName: Release Time
+    m_GUID: cc812173c8ec252429287fff693a7f9d
+  - m_ParameterName: Make-up Gain
+    m_GUID: 673241f6aa35a2d4893e1d3408071753
+  - m_ParameterName: Knee
+    m_GUID: 72bd49277ec189e43a00b56574884bdd
+  - m_ParameterName: Sidechain Mix
+    m_GUID: b73457f508ba24a4cb9c48ab945f5f22
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!245 &2292876253719272998
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -161,6 +204,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: -3715073926738851347}
   - {fileID: 4513933929649706042}
+  - {fileID: 1266511043101434567}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -179,6 +223,7 @@ AudioMixerGroupController:
   m_Pitch: 545e4b18d93e04a92b2084693ce60010
   m_Send: 00000000000000000000000000000000
   m_Effects:
+  - {fileID: 2104517877228665194}
   - {fileID: -3316855453817728506}
   m_UserColorIndex: 0
   m_Mute: 0
