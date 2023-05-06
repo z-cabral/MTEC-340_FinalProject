@@ -31,7 +31,7 @@ public class GuardAudio : MonoBehaviour
             StopCoroutine(WaitToPlayNextClip());
             prevClipIndex = clipIndex;
             clipIndex = Random.Range(0, dxSearchingClips.Length - 1);
-            while (clipIndex == prevClipIndex)
+            if (clipIndex == prevClipIndex)
             {
                 clipIndex = Random.Range(0, dxSearchingClips.Length - 1);
             }
@@ -58,7 +58,7 @@ public class GuardAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxSuspiciousClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxSuspiciousClips.Length - 1);
         }
@@ -72,7 +72,7 @@ public class GuardAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxUnsuspiciousClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxUnsuspiciousClips.Length - 1);
         }
@@ -86,7 +86,7 @@ public class GuardAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxShutDownClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxShutDownClips.Length - 1);
         }
@@ -100,7 +100,7 @@ public class GuardAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxFoundClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxFoundClips.Length - 1);
         }

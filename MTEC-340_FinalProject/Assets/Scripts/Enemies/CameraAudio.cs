@@ -16,7 +16,7 @@ public class CameraAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxSuspiciousClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxSuspiciousClips.Length - 1);
         }
@@ -30,7 +30,7 @@ public class CameraAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxUnsuspiciousClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxUnsuspiciousClips.Length - 1);
         }
@@ -44,7 +44,7 @@ public class CameraAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxShutDownClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxShutDownClips.Length - 1);
         }
@@ -58,7 +58,7 @@ public class CameraAudio : MonoBehaviour
     {
         prevClipIndex = clipIndex;
         clipIndex = Random.Range(0, dxFoundClips.Length - 1);
-        while (clipIndex == prevClipIndex)
+        if (clipIndex == prevClipIndex)
         {
             clipIndex = Random.Range(0, dxFoundClips.Length - 1);
         }

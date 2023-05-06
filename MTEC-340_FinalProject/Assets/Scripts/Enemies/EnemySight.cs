@@ -19,7 +19,7 @@ public class EnemySight : MonoBehaviour
 
     void Update()
     {
-        EyeSight();
+        //EyeSight();
     }
 
     public void EyeSight()
@@ -28,52 +28,59 @@ public class EnemySight : MonoBehaviour
 
         areSeeing = Physics.SphereCast(sight, 0.75f, out hit);
 
-        seenObject = hit.transform.gameObject;
-
+        //if (areSeeing == false) ;
+            //Debug.Log(seenObject);
+            //seenObject = hit.transform.gameObject;
+        
     }
 
     public bool IntruderSearch(GameObject target)
     {
-        //grab the gameObject's transform
-        Vector3 startVec = transform.position;
-        //grab the gameObject's transform, but also add 1 to z
-        Vector3 startVecFwd = transform.forward;
+        if(target != null) { 
 
-        RaycastHit hit;
-        //Calculate the vector of the target in relation to the gameObject's Vector, instead of the world space
-        //You can think of it as making a Vector3 of the target's position that is in Relative space, with
-        //the gameObject's position as the origin point.
-        Vector3 targetVec = target.transform.position - startVec;
+            //grab the gameObject's transform
+            Vector3 startVec = transform.position;
+            //grab the gameObject's transform, but also add 1 to z
+            Vector3 startVecFwd = transform.forward;
 
-        if(Physics.Raycast(startVec, targetVec, out hit, farSightDistance) && hit.collider.gameObject == target)
-        {
-            //If the Angle between the targetVector and the gameObject's forward Vector is less than the gameObject's
-            //close vision cone, AND the Distance between the gameObject's position and the target's position is less than
-            //or equal to the distance of the gameObject's near sight (peripheral vision), then return true.
-            if ((Vector3.Angle(targetVec, startVecFwd) < nearSightAngle &&
-                (Vector3.Distance(startVec, target.transform.position) <= nearSightDistance)))
+            RaycastHit hit;
+            //Calculate the vector of the target in relation to the gameObject's Vector, instead of the world space
+            //You can think of it as making a Vector3 of the target's position that is in Relative space, with
+            //the gameObject's position as the origin point.
+            Vector3 targetVec = target.transform.position - startVec;
+            bool seenObject = Physics.Raycast(startVec, targetVec, out hit, farSightDistance);
+            float seenObjectAngle = Vector3.Angle(targetVec, startVecFwd);
+            float seenObjectDistance = Vector3.Distance(startVec, target.transform.position);
+
+            if (seenObject && hit.collider.gameObject == target)
             {
-                return true;
-            }
-            //If the Angle between the targetVector and the gameObject's forward Vector is less than the gameObject's
-            //far vision cone, AND the Raycast hits within the far vision distance, then check to see if the hit is
-            //is the target, if it is, return true, if not, then false.
-            if ((Vector3.Angle(targetVec, startVecFwd)) < farSightAngle &&
-                Physics.Raycast(startVec, targetVec, out hit, farSightDistance))
-            {
-                // Debug.Log(hit.rigidbody.gameObject.name);
-                if (hit.collider.gameObject == target)
+                //If the Angle between the targetVector and the gameObject's forward Vector is less than the gameObject's
+                //close vision cone, AND the Distance between the gameObject's position and the target's position is less than
+                //or equal to the distance of the gameObject's near sight (peripheral vision), then return true.
+                if ((seenObjectAngle < nearSightAngle &&
+                    (seenObjectDistance <= nearSightDistance)))
                 {
                     return true;
                 }
-                else
+                //If the Angle between the targetVector and the gameObject's forward Vector is less than the gameObject's
+                //far vision cone, AND the Raycast hits within the far vision distance, then check to see if the hit is
+                //is the target, if it is, return true, if not, then false.
+                if ((seenObjectAngle) < farSightAngle && seenObject)
                 {
-                    return false;
+                    // Debug.Log(hit.rigidbody.gameObject.name);
+                    if (hit.collider.gameObject == target)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
+                return false;
             }
             return false;
         }
         return false;
-
     }
 }

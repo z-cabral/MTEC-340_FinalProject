@@ -111,18 +111,18 @@ public class MouseLook : MonoBehaviour
 
     public void Peek()
     {
-        RaycastHit hit;
+        //RaycastHit hit;
 
         //if(Physics.Raycast(ray, out hit, 100))
-        if (Physics.Raycast(transform.up, transform.right, out hit, 0.2f) == false )
-        {
+        //if (Physics.Raycast(transform.up, transform.right, out hit, 0.2f) == false )
+        //{
         //Debug.Log(hit);
         //Debug.Log(hit.point);
             //Debug.DrawRay(transform.up, transform.right, Color.white, 0.2f);
         //curAngle = Mathf.MoveTowardsAngle(curAngle, maxLeanAngle * Input.GetAxis("Lean"), speed * Time.deltaTime);
           curAngle = Mathf.MoveTowardsAngle(curAngle, -maxLeanAngle * playerLook.z, speed * Time.deltaTime);
         _Pivot.transform.localRotation = Quaternion.AngleAxis(curAngle, Vector3.forward);
-        }
+        //}
     }
 
     
