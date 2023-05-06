@@ -10,6 +10,7 @@ public class GuardDeactivatedState : GuardBaseState
         guard.IsPowered = false;
         guard.Deactivateable = false;
         duration = 10f;
+        guard.Audio.ShutdownVO();
         Debug.Log(guard.name + " is DEACTIVATED");
     }
 

@@ -9,6 +9,7 @@ public class CameraDeactivatedState : CameraBaseState
         camera.IsPowered = false;
         camera.Deactivateable = false;
         duration = 10f;
+        camera.Audio.ShutdownVO();
         Debug.Log(camera.name + " is DEACTIVATED");
     }
 

@@ -8,10 +8,12 @@ public class GuardUnalertState : GuardBaseState
         guard.Deactivateable = true;
         Debug.Log(guard.name + " is UNALERT");
         guard.EnemyMovement.agent.enabled = true;
+        guard.Audio.UnsuspiciousVO();
     }
 
     public override void UpdateState(GuardStateMachine guard)
     {
+        guard.Audio.SearchingVO();
         //if (!guard.HeadSight.seenObject.TryGetComponent<MouseLook>(out MouseLook looker))
         if(!guard.HeadSight.IntruderSearch(PlayerStateMachine.Instance.gameObject))
         {

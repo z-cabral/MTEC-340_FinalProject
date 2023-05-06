@@ -22,6 +22,7 @@ public class GuardStateMachine : MonoBehaviour
     public EnemySight HeadSight;
     public EnemySight BodySight;
     public EnemyUtilities Utilities;
+    public GuardAudio Audio;
 
     public Vector3 playerLast;
 
@@ -32,6 +33,7 @@ public class GuardStateMachine : MonoBehaviour
         HeadSight = GetComponentInChildren<EnemySight>();
         BodySight = GetComponent<EnemySight>();
         Utilities = GetComponent<EnemyUtilities>();
+        Audio = GetComponent<GuardAudio>();
     }
 
     private void Start()

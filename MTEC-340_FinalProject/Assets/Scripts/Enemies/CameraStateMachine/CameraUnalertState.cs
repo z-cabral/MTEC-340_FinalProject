@@ -9,6 +9,7 @@ public class CameraUnalertState : CameraBaseState
         camera.IsPowered = true;
         camera.Deactivateable = true;
         Debug.Log(camera.name + " is UNALERT");
+        camera.Audio.UnsuspiciousVO();
     }
 
     public override void UpdateState(CameraStateMachine camera)

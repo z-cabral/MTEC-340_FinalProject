@@ -18,6 +18,7 @@ public class CameraSuspiciousState : CameraBaseState
         //Random VO
         duration = 10f;
         timerIsRunning = true;
+        camera.Audio.SuspiciousVO();
     }
 
     public override void UpdateState(CameraStateMachine camera)

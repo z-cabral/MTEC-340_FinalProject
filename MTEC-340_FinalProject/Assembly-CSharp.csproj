@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\GameStateMachine\GameMenuState.cs" />
     <Compile Include="Assets\Scripts\GameBehavior.cs" />
     <Compile Include="Assets\Scripts\Utilities.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GuardAudio.cs" />
     <Compile Include="Assets\Scripts\GameStateMachine\GameBaseState.cs" />
     <Compile Include="Assets\Scripts\Player\LaserBehaviour.cs" />
     <Compile Include="Assets\Scripts\SceneBehaviour.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraAlertState.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Enemies\CameraAudio.cs" />
     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraStateMachine\CameraUnalertState.cs" />
     <Compile Include="Assets\Scripts\DepthOfFieldControl.cs" />

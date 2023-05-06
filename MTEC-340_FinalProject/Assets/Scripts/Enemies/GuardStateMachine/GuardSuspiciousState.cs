@@ -17,7 +17,7 @@ public class GuardSuspiciousState : GuardBaseState
         Debug.Log(guard.name + " is SUSPICIOUS");
         guard.gameObject.transform.LookAt(guard.playerLast);
         //Stop Head Scanning Animation
-        //Play Random VO
+        guard.Audio.SuspiciousVO();
         duration = 5f;
         timerIsRunning = true;
     }

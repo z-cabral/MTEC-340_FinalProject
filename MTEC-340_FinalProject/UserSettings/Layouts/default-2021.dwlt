@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2456
     height: 1397
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 16
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 116
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 117
+  controlID: 18
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 421
     height: 932
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 1347
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -402,23 +402,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: dcaafbffa6b4fbff5854fcff5a54fcff6254fcff6a54fcff7254fcff7a54fcff8254fcff8a54fcff9254fcff9c54fcffa654fcffb054fcff5661fcff9a78fcff1c7afcffaa7dfcffd480fcff0685fcff8a8bfcffbc8dfcffe48efcffa2a7fcffe6bbfcffaebefcff5cd0fcff54f9fcffe87efdff28a6fdff1eb1fdffe0bcfdffaed6fdffe0ddfdff32defdff34effdff86effdffd0effdffb4f7fdff06f8fdff5213feffb41dfeff5034feff769efeffe6e1feff64c0ffffbcc2ffff14c3fffffcc6ffffcccbffffd2cdffff2cd0ffff9ad1ffffe0d2ffff42dbffff58e1ffff82e6ffffa6e8ffffeeeafffff8f1ffffe2f3ffff04fbffff28680000
+      m_SelectedIDs: 00fbffff
+      m_LastClickedID: -1280
+      m_ExpandedIDs: 00fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Environment
-        m_OriginalName: Environment
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 26664
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -686,9 +686,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 55.33045, y: 52.86514, z: -90.408554}
+    m_Target: {x: 78.24773, y: 37.579773, z: -33.311283}
     speed: 2
-    m_Value: {x: 55.33045, y: 52.86514, z: -90.408554}
+    m_Value: {x: 78.24773, y: 37.579773, z: -33.311283}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -735,13 +735,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.24785206, y: -0.09799747, z: 0.026803538, w: 0.9656977}
+    m_Target: {x: 0.19662869, y: -0.5697396, z: 0.13112403, w: 0.7901607}
     speed: 2
-    m_Value: {x: 0.2472365, y: -0.100676656, z: 0.0274876, w: 0.9633186}
+    m_Value: {x: 0.19615716, y: -0.5683733, z: 0.13080959, w: 0.7882658}
   m_Size:
-    m_Target: 11.901106
+    m_Target: 12.813197
     speed: 2
-    m_Value: 11.388618
+    m_Value: 13.416961
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -835,22 +835,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/SciFi Warehouse Kit/Prefabs/Props/Misc Props
+    - Assets/Audio/SFX/Camera
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/SciFi Warehouse Kit/Prefabs/Props/Misc Props
+  - Assets/Audio/SFX/Camera
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Github_Repos\MTEC-340_FinalProject\MTEC-340_FinalProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 175}
-    m_SelectedIDs: f23a0100
-    m_LastClickedID: 80626
-    m_ExpandedIDs: 00000000828600008486000086860000a6860000d8860000da860000ee3a010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d2790000
+    m_LastClickedID: 31186
+    m_ExpandedIDs: 00000000587400005a7400005c7400007274000088740000ba740000d079000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -878,7 +878,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000828600008486000086860000
+    m_ExpandedIDs: 00000000587400005a7400005c740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -909,15 +909,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000074b50000b0bf000022790100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Misc Props
-      m_OriginalName: Misc Props
+      m_Name: SFX
+      m_OriginalName: SFX
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 80626
+      m_UserData: 31184
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -990,18 +990,19 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
+  m_ObjectsLockedBeforeSerialization:
+  - {fileID: 7247834078175667445, guid: 476eb1b02accb604a97f423102fbd9eb, type: 3}
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
     m_CachedPref: 268
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 530
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
-    m_IsLocked: 0
+    m_IsLocked: 1
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:

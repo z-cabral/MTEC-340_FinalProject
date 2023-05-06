@@ -19,6 +19,7 @@ public class CameraStateMachine : MonoBehaviour
 
     public ReactiveTarget ReactiveTarget;
     public EnemySight HeadSight;
+    public CameraAudio Audio;
 
     public Vector3 playerLast;
 
@@ -26,7 +27,7 @@ public class CameraStateMachine : MonoBehaviour
     {
         ReactiveTarget = GetComponent<ReactiveTarget>();
         HeadSight = GetComponent<EnemySight>();
-
+        Audio = GetComponent<CameraAudio>();
     }
 
     private void Start()
