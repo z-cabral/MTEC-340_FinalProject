@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638182553788529161
-    m_Hash: 2896663382
+      ticks: 638190087343116869
+    m_Hash: 3763709073
   m_LockFileStatus:
     m_FilePath: E:/Github_Repos/MTEC-340_FinalProject/MTEC-340_FinalProject/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638182553805362713
-    m_Hash: 3613323456
+      ticks: 638190087343121823
+    m_Hash: 3082965766
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -3670,10 +3670,12 @@ m_ResolvedPackages:
     - 3.0.2
     - 3.1.0
     - 3.2.0
+    - 3.2.1
     compatible:
     - 3.0.2
     - 3.1.0
     - 3.2.0
+    - 3.2.1
     verified: 3.0.2
   dependencies: []
   resolvedDependencies: []
